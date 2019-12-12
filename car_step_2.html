@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" lang="zh-Hant-TW">
+	<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/images/general/favicon.ico">
+	<title>旺旺友聯網投 2.0</title>
+	<!-- jQuery -->
+	<script src="assets/plugin/jquery.min.js"></script>
+	<!-- ajax jquery include html -->
+	<script>
+		$(document).ready(function() {
+		/* ajax jquery include html */
+		$(".ajax_header").load("ajax_header.html");
+		$(".ajax_footer").load("ajax_footer.html");
+	});
+	</script>
+	<!-- Bootstrap v4.3 -->
+	<script src="assets/plugin/bootstrap/bootstrap.min.js"></script>
+	<link href="assets/plugin/bootstrap/bootstrap.css" rel="stylesheet">
+	<!-- Bootstrap 自定義 -->
+	<link href="assets/plugin/bootstrap/bootstrap-grid-customizing.css" rel="stylesheet">
+	<!-- jQuery UI -->
+	<link href="assets/plugin/jquery_ui/jquery-ui.min.css" rel="stylesheet">
+	<script src="assets/plugin/jquery_ui/jquery-ui.min.js"></script>
+	<!-- 日期選擇器_世界年與民國年：支援 jQuery UI -->
+	<script src="assets/plugin/datepicker_globe_tw.js"></script>
+	<!-- 搜全局輸入框：搜尋自動完成 -->
+	<script src="assets/plugin/plumen.js"></script>
+	<!-- 輪播：Swiper 支援IE10+ -->
+	<link href="assets/plugin/swiper.min.css" rel="stylesheet">
+	<script src="assets/plugin/swiper.min.js"></script>
+	<!-- 延遲加載圖像：Lazy Load 2 -->
+	<script src="assets/plugin/lazyload2.min.js"></script>
+	<!-- 自訂CSS樣式 -->
+	<link href="assets/css/type.css" rel="stylesheet">
+	<!-- 自訂JS樣式 -->
+	<script src="assets/js/type.js"></script>
+	<!-- Plug CSS樣式 -->
+	<link href="assets/css/type_plug.css" rel="stylesheet">
+</head>
+
+<body>
+	<!--ajax jquery include html-->
+	<div class="ajax_header"></div>
+	<!--內容主要區塊 上方空間-->
+	<div class="space_top_box"></div>
+	<!---------------------------------------------------------------->
+	<!--內容主要區塊 步驟流程-->
+	<div class="content_box">
+		<div class="content_rwd">
+			<div class="step_box">
+				<div class="car_box in2">
+					<div class="line"></div>
+					<img class="car" src="assets/images/car/icon_step_car.svg" alt="car">
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">車主概要</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">車籍資料</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">選擇方案</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">投保內容</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">要保資訊</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">付款投保</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<form action="#" method="get">
+		<!--內容主要區塊-->
+		<div class="content_box relative have_bg">
+			<div class="bg_car left">
+				<img src="assets/images/car/bg_car.svg" alt="#">
+			</div>
+			<div class="content_rwd">
+				<div class="container-fluid">
+					<div class="row justify-content-end">
+						<div class="col_input col-xxl-8 col-xl-8 col-lg-10 col-sm-12 col-12">
+							<div class="car_input_box">
+								<div class="col_title_box flexbox fac">
+									<div class="icon">
+										<img src="assets/images/car/icon_input_car.svg" alt="icon">
+									</div>
+									<div class="title_box">車主基本資料</div>
+								</div>
+								<div class="input_type">
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">身份別</div>
+												<div class="input_content">
+													<div class="input_content_padding">
+														<span class="checkbox_box">
+															<input id="radio04_1" type="radio" name="identity" class="identity" value="1" checked="">
+															<label for="radio04_1">本國人</label>
+														</span>
+														<span class="checkbox_box">
+															<input id="radio04_2" type="radio" name="identity" class="identity" value="2">
+															<label for="radio04_2">外國人</label>
+														</span>
+														<span class="checkbox_box">
+															<input id="radio04_3" type="radio" name="identity" class="identity" value="3">
+															<label for="radio04_3">法人</label>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--本國人 顯示-->
+									<div class="row taiwanese">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">身份證資料</div>
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row taiwanese">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">生日(民國)</div>
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<div class="input_group">
+																<input class="mingo placeholder" type="tel" placeholder="" required="" />
+																<span class="img_btn flexbox fjc fac">
+																	<img src="assets/images/general/input_icon_date.svg" alt="#">
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row taiwanese">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">車輛總類</div>
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<div class="select_box">
+																<select name="#">
+																	<option value="0"></option>
+																	<option value="1"></option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row taiwanese">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">車牌號碼</div>
+												<div class="input_car_box input_content">
+													<div class="input_car no1 input_border style_2 pie">
+														<div class="input_padding">
+															<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+													<div class="input_car no2 and flexbox fjc fac">-</div>
+													<div class="input_car no3 input_border input_2of2 style_2 pie">
+														<div class="input_padding">
+															<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row taiwanese">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">活動代碼</div>
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<input type="text" placeholder="若無活動代碼毋須填寫" class="placeholder" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--/本國人 顯示-->
+									<!--外國人-->
+									<div class="row off foreign">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">護照號碼</div>
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row off foreign">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">生日(民國)</div>
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<div class="input_group">
+																<input class="mingo placeholder" type="tel" placeholder="" required="" />
+																<span class="img_btn flexbox fjc fac">
+																	<img src="assets/images/general/input_icon_date.svg" alt="#">
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row off foreign">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">車輛總類</div>
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<div class="select_box">
+																<select name="#">
+																	<option value="0"></option>
+																	<option value="1"></option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row off foreign">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">車牌號碼</div>
+												<div class="input_car_box input_content">
+													<div class="input_car no1 input_border style_2 pie">
+														<div class="input_padding">
+															<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+													<div class="input_car no2 and flexbox fjc fac">-</div>
+													<div class="input_car no3 input_border input_2of2 style_2 pie">
+														<div class="input_padding">
+															<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row off foreign">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">活動代碼</div>
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<input type="text" placeholder="若無活動代碼毋須填寫" class="placeholder" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--/外國人-->
+									<!--法人-->
+									<div class="row off legal_person">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">統一編號</div>
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row off legal_person">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">生日(民國)</div>
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<div class="input_group">
+																<input class="mingo placeholder" type="tel" placeholder="" required="" />
+																<span class="img_btn flexbox fjc fac">
+																	<img src="assets/images/general/input_icon_date.svg" alt="#">
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row off legal_person">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">車輛總類</div>
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<div class="select_box">
+																<select name="#">
+																	<option value="0"></option>
+																	<option value="1"></option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row off legal_person">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">車牌號碼</div>
+												<div class="input_car_box input_content">
+													<div class="input_car no1 input_border style_2 pie">
+														<div class="input_padding">
+															<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+													<div class="input_car no2 and flexbox fjc fac">-</div>
+													<div class="input_car no3 input_border input_2of2 style_2 pie">
+														<div class="input_padding">
+															<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row off legal_person">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">活動代碼</div>
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<input type="text" placeholder="若無活動代碼毋須填寫" class="placeholder" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--/法人-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--內容主要區塊-->
+		<div class="content_box relative have_bg">
+			<div class="bg_car right">
+				<img src="assets/images/car/bg_car.svg" alt="#">
+			</div>
+			<div class="content_rwd">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col_input col-xxl-8 col-xl-8 col-lg-10 col-sm-12 col-12">
+							<div class="car_input_box">
+								<div class="col_title_box flexbox fac">
+									<div class="icon">
+										<img src="assets/images/car/icon_input_car.svg" alt="icon">
+									</div>
+									<div class="title_box">車籍資料</div>
+									<a class="icon_link" target="_blank" href="#">
+										<img src="assets/images/car/icon_input_link.svg" alt="link">
+									</a>
+								</div>
+								<div class="input_type">
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title"></div>
+												<div class="input_content">
+													<div class="input_text_padding">
+														<span class="checkbox_box">
+															<input id="checkbox01_1" type="checkbox" name="checkbox01" value="1">
+															<label for="checkbox01_1">我要投保車體損失險或竊盜損失險</label>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">製造年月</div>
+												<div class="input_content">
+													<div class="input_border input_1of2 style_2 pie">
+														<div class="input_padding">
+															<div class="select_box">
+																<select name="#" required="">
+																	<option value="0"></option>
+																	<option value="10">2019</option>
+																	<option value="9">2018</option>
+																	<option value="8">2017</option>
+																	<option value="7">2018</option>
+																	<option value="6">2015</option>
+																	<option value="5">2014</option>
+																	<option value="4">2013</option>
+																	<option value="3">2012</option>
+																	<option value="2">2011</option>
+																	<option value="1">2010</option>
+																</select>
+															</div>
+														</div>
+													</div>
+													<div class="input_border input_2of2 style_2 pie">
+														<div class="input_padding">
+															<div class="select_box">
+																<select name="#" required="">
+																	<option value="0"></option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
+																	<option value="5">5</option>
+																	<option value="6">6</option>
+																	<option value="7">7</option>
+																	<option value="8">8</option>
+																	<option value="9">9</option>
+																	<option value="10">10</option>
+																	<option value="11">11</option>
+																	<option value="12">12</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">原始發照日期</div>
+												<div class="input_content">
+													<div class="input_border input_1of3 style_2 pie">
+														<div class="input_padding">
+															<div class="select_box">
+																<select name="#" required="">
+																	<option value="0"></option>
+																	<option value="10">2019</option>
+																	<option value="9">2018</option>
+																	<option value="8">2017</option>
+																	<option value="7">2018</option>
+																	<option value="6">2015</option>
+																	<option value="5">2014</option>
+																	<option value="4">2013</option>
+																	<option value="3">2012</option>
+																	<option value="2">2011</option>
+																	<option value="1">2010</option>
+																</select>
+															</div>
+														</div>
+													</div>
+													<div class="input_border input_2of3 style_2 pie">
+														<div class="input_padding">
+															<div class="select_box">
+																<select name="#" required="">
+																	<option value="0"></option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
+																	<option value="5">5</option>
+																	<option value="6">6</option>
+																	<option value="7">7</option>
+																	<option value="8">8</option>
+																	<option value="9">9</option>
+																	<option value="10">10</option>
+																	<option value="11">11</option>
+																	<option value="12">12</option>
+																</select>
+															</div>
+														</div>
+													</div>
+													<div class="input_border input_3of3 style_2 pie">
+														<div class="input_padding">
+															<div class="select_box">
+																<select name="#" required="">
+																	<option value="0"></option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
+																	<option value="5">5</option>
+																	<option value="6">6</option>
+																	<option value="7">7</option>
+																	<option value="8">8</option>
+																	<option value="9">9</option>
+																	<option value="10">10</option>
+																	<option value="11">11</option>
+																	<option value="12">12</option>
+																	<option value="13">13</option>
+																	<option value="14">14</option>
+																	<option value="15">15</option>
+																	<option value="16">16</option>
+																	<option value="17">17</option>
+																	<option value="18">18</option>
+																	<option value="19">19</option>
+																	<option value="20">20</option>
+																	<option value="21">21</option>
+																	<option value="22">22</option>
+																	<option value="23">23</option>
+																	<option value="24">24</option>
+																	<option value="25">25</option>
+																	<option value="26">26</option>
+																	<option value="27">27</option>
+																	<option value="28">28</option>
+																	<option value="29">29</option>
+																	<option value="30">30</option>
+																	<option value="31">31</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">乘載限制</div>
+												<div class="input_content">
+													<div class="input_border input_l1 style_2 pie">
+														<div class="input_padding">
+															<input type="text" placeholder="" class="placeholder" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+													<div class="input_text_padding input_r2">
+														<div class="text">人</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">排氣量</div>
+												<div class="input_content">
+													<div class="input_border input_l1 style_2 pie">
+														<div class="input_padding">
+															<div class="select_box">
+																<select name="#" required="">
+																	<option value="0"></option>
+																	<option value="1"></option>
+																</select>
+															</div>
+														</div>
+													</div>
+													<div class="input_text_padding input_r2">
+														<span class="checkbox_box">
+															<input id="radio02_1" type="radio" name="radio02" value="1">
+															<label for="radio02_1">CC</label>
+														</span>
+														<span class="checkbox_box">
+															<input id="radio02_2" type="radio" name="radio02" value="2">
+															<label for="radio02_2">馬力</label>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">車輛廠型</div>
+												<div class="input_content">
+													<button type="submit" class="input_button button style_2 bt_color_1 pie" data-toggle="modal" data-target="#car_popup">車輛廠型</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">廠牌</div>
+												<div class="input_content">
+													<div class="input_text_padding">
+														<div class="text">BENZ賓士</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">車型</div>
+												<div class="input_content">
+													<div class="input_text_padding">
+														<div class="text">BENZ賓士</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">重置價格</div>
+												<div class="input_content">
+													<div class="input_text_padding">
+														<div class="text">3,110,000</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--內容主要區塊-->
+		<div class="content_box">
+			<div class="content_rwd">
+				<div class="container-fluid">
+					<div class="row justify-content-center">
+						<div class="col_input col-xxl-5 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<button type="button" class="button style_2 bt_color_2 pie" onclick="javascript:location.href='car_step_2.html'">上一步-車主基本資料</button>
+						</div>
+						<div class="col_input col-xxl-5 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<button type="submit" class="button style_2 bt_color_1 pie" onclick="javascript:location.href='car_step_3.html'">下一步-選擇方案</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	<!-- popup -->
+	<!-- car_popup Modal -->
+	<div class="modal fade car_pop" id="car_popup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">選擇車輛廠型</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="border-dashed input_type">
+						<form action="">
+							<div class="row">
+								<div class="col_input col-xxl-4 col-xl-4 col-lg-6 col-sm-12 col-12">
+									<div class="input_text_padding">
+										<div class="input_title">製造年月</div>
+										<div class="input_content">
+											<div class="input_border input_1of2 style_2 pie">
+												<div class="input_padding">
+													<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+												</div>
+											</div>
+											<div class="input_border input_2of2 style_2 pie">
+												<div class="input_padding">
+													<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col_input col-xxl-4 col-xl-4 col-lg-6 col-sm-12 col-12">
+									<div class="input_text_padding">
+										<div class="input_title">排氣量</div>
+										<div class="input_content">
+											<div class="input_border style_2 pie">
+												<div class="input_padding">
+													<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col_input col-xxl-4 col-xl-4 col-lg-6 col-sm-12 col-12">
+									<div class="input_text_padding">
+										<div class="input_title">車輛種類</div>
+										<div class="input_content">
+											<div class="input_border style_2 pie">
+												<div class="input_padding">
+													<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="box-green">
+						<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+						<label for="inlineRadio1">廠牌查詢</label>
+					</div>
+					<div class="input_type">
+						<form action="">
+							<div class="row">
+								<div class="col_input col-xxl-4 col-xl-4 col-lg-4 col-sm-12 col-12">
+									<div class="input_text_padding">
+										<div class="input_title">廠牌</div>
+										<div class="input_content">
+											<div class="input_border style_2 pie">
+												<div class="input_padding">
+													<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col_input col-xxl-4 col-xl-4 col-lg-4 col-sm-12 col-12">
+									<div class="input_text_padding">
+										<div class="input_title">車型</div>
+										<div class="input_content">
+											<div class="input_border style_2 pie">
+												<div class="input_padding">
+													<div class="select_box">
+														<select name="#">
+															<option value="0"></option>
+															<option value="1"></option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col_input col-xxl-4 col-xl-4 col-lg-4 col-sm-12 col-12">
+									<div class="input_text_padding">
+										<div class="input_title">車系</div>
+										<div class="input_content">
+											<div class="input_border style_2 pie">
+												<div class="input_padding">
+													<div class="select_box">
+														<select name="#">
+															<option value="0"></option>
+															<option value="1"></option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<h6 class="car_pop_brand">常用車種</h6>
+					<div class="car_brand_select">
+						<ul>
+							<li>
+								<a href="#">
+									<img src="assets/images/car/car_logo_0.jpg" alt="">
+									<p>Audi</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="assets/images/car/car_logo_0.jpg" alt="">
+									<p>Benz</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="assets/images/car/car_logo_0.jpg" alt="">
+									<p>BMW</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="assets/images/car/car_logo_0.jpg" alt="">
+									<p>Cadillac</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="assets/images/car/car_logo_0.jpg" alt="">
+									<p>Ford</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="assets/images/car/car_logo_0.jpg" alt="">
+									<p>Honda</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="assets/images/car/car_logo_0.jpg" alt="">
+									<p>Mazda</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="assets/images/car/car_logo_0.jpg" alt="">
+									<p>Mitsubishi</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="assets/images/car/car_logo_0.jpg" alt="">
+									<p>Nissan</p>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="assets/images/car/car_logo_0.jpg" alt="">
+									<p>Toyota</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="car_word_select">
+						<ul>
+							<li><a href="#">A</a></li>
+							<li><a href="#">B</a></li>
+							<li><a href="#">C</a></li>
+							<li><a href="#">D</a></li>
+							<li><a href="#">E</a></li>
+							<li><a href="#">F</a></li>
+							<li><a href="#">G</a></li>
+							<li><a href="#">H</a></li>
+							<li><a href="#">I</a></li>
+							<li><a href="#">J</a></li>
+							<li><a href="#">K</a></li>
+							<li><a href="#">L</a></li>
+							<li><a href="#">M</a></li>
+							<li><a href="#">N</a></li>
+							<li><a href="#">O</a></li>
+							<li><a href="#">P</a></li>
+							<li><a href="#">Q</a></li>
+							<li><a href="#">R</a></li>
+							<li><a href="#">S</a></li>
+							<li><a href="#">T</a></li>
+							<li><a href="#">U</a></li>
+							<li><a href="#">V</a></li>
+							<li><a href="#">W</a></li>
+							<li><a href="#">X</a></li>
+							<li><a href="#">Y</a></li>
+							<li><a href="#">Z</a></li>
+						</ul>
+					</div>
+					<div class="car_word_select_menu">
+						<ul>
+							<li>
+								<a href="">Acura 雅格</a>
+							</li>
+							<li>
+								<a href="">Alfa Romeo 愛快羅密歐</a>
+							</li>
+							<li>
+								<a href="">Alpine 阿爾派</a>
+							</li>
+							<li>
+								<a href="">Alpine 阿爾派</a>
+							</li>
+							<li>
+								<a href="">Alpine 阿爾派</a>
+							</li>
+							<li>
+								<a href="">Alpine 阿爾派</a>
+							</li>
+						</ul>
+					</div>
+					<div class="box-pruple">
+						<div class="search_1of2">
+							<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option1">
+							<label for="inlineRadio2">關鍵字查詢</label>
+						</div>
+						<div class="searchContainer search_2of2">
+							<input class="searchBox" type="search" name="search" placeholder="Search...">
+						</div>
+					</div>
+					<!-- box-pruple end -->
+					<div class="car_table">
+						<table>
+							<thead>
+								<tr>
+									<th>車型代號</th>
+									<th>車型名稱</th>
+									<th>產地</th>
+									<th>排氣量</th>
+									<th colspan="2">重置價</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>09120100</td>
+									<td>Camry 2.0J AA 4D (A)</td>
+									<td>國產</td>
+									<td>2000.c.c</td>
+									<td>90萬</td>
+									<td><button class="btn_check">確定</button></td>
+								</tr>
+								<tr>
+									<td>09120100</td>
+									<td>Camry 2.0J AA 4D (A)</td>
+									<td>國產</td>
+									<td>2000.c.c</td>
+									<td>90萬</td>
+									<td><button class="btn_check">確定</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!---------------------------------------------------------------->
+	<!--內容主要區塊 下方空間-->
+	<div class="space_bottom_box"></div>
+	<!--ajax jquery include html-->
+	<div class="ajax_footer"></div>
+</body>
+
+</html>

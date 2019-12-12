@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" lang="zh-Hant-TW">
+	<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/images/general/favicon.ico">
+	<title>旺旺友聯網投 2.0</title>
+	<!-- jQuery -->
+	<script src="assets/plugin/jquery.min.js"></script>
+	<!-- ajax jquery include html -->
+	<script>
+	$(document).ready(function() {
+		/* ajax jquery include html */
+		$(".ajax_header").load("ajax_header.html");
+		$(".ajax_footer").load("ajax_footer.html");
+	});
+	</script>
+	<!-- Bootstrap v4.3 -->
+	<script src="assets/plugin/bootstrap/bootstrap.min.js"></script>
+	<link href="assets/plugin/bootstrap/bootstrap.css" rel="stylesheet">
+	<!-- Bootstrap 自定義 -->
+	<link href="assets/plugin/bootstrap/bootstrap-grid-customizing.css" rel="stylesheet">
+	<!-- jQuery UI -->
+	<link href="assets/plugin/jquery_ui/jquery-ui.min.css" rel="stylesheet">
+	<script src="assets/plugin/jquery_ui/jquery-ui.min.js"></script>
+	<!-- 日期選擇器_世界年與民國年：支援 jQuery UI -->
+	<script src="assets/plugin/datepicker_globe_tw.js"></script>
+	<!-- 搜全局輸入框：搜尋自動完成 -->
+	<script src="assets/plugin/plumen.js"></script>
+	<!-- 輪播：Swiper 支援IE10+ -->
+	<link href="assets/plugin/swiper.min.css" rel="stylesheet">
+	<script src="assets/plugin/swiper.min.js"></script>
+	<!-- 延遲加載圖像：Lazy Load 2 -->
+	<script src="assets/plugin/lazyload2.min.js"></script>
+	<!-- 自訂CSS樣式 -->
+	<link href="assets/css/type.css" rel="stylesheet">
+	<!-- 自訂JS樣式 -->
+	<script src="assets/js/type.js"></script>
+	<!-- Plug CSS樣式 -->
+	<link href="assets/css/type_plug.css" rel="stylesheet">
+</head>
+
+<body>
+	<!--ajax jquery include html-->
+	<div class="ajax_header"></div>
+	<!--內容主要區塊 上方空間-->
+	<div class="space_top_box"></div>
+	<!---------------------------------------------------------------->
+	<!--內容主要區塊 步驟流程-->
+	<div class="content_box">
+		<div class="content_rwd">
+			<div class="step_box">
+				<div class="car_box in5">
+					<div class="line"></div>
+					<img class="car" src="assets/images/car/icon_step_car.svg" alt="car">
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">車主概要</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">車籍資料</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">選擇方案</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">投保內容</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">要保資訊</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">付款投保</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--內容主要區塊-->
+	<div class="content_box relative have_bg flexbox fac">
+		<div class="bg_car left">
+			<img src="assets/images/car/bg_car.svg" alt="#">
+		</div>
+		<div class="content_rwd">
+			<div class="container-fluid">
+				<div class="row justify-content-end">
+					<div class="col_input col-xxl-8 col-xl-8 col-lg-10 col-sm-12 col-12">
+						<div class="car_input_box action">
+							<div class="col_title_box flexbox fac action">
+								<div class="icon">
+									<img src="assets/images/car/icon_input_car.svg" alt="icon">
+								</div>
+								<div class="title_box">保險車籍資料</div>
+								<div class="icon_link bt_collapse">
+									<img src="assets/images/car/icon_input_link.svg" alt="link">
+								</div>
+							</div>
+							<div class="input_type off">
+								<div class="row">
+									<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+										<div class="input_text_padding">
+											<div class="input_title">車牌號碼</div>
+											<div class="input_content">
+												<div class="input_text_padding">
+													<div class="text">UCC-5678</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+										<div class="input_text_padding">
+											<div class="input_title">車輛總類</div>
+											<div class="input_content">
+												<div class="input_text_padding">
+													<div class="text">03-自小客</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+										<div class="input_text_padding">
+											<div class="input_title">引擎號碼</div>
+											<div class="input_content">
+												<div class="input_text_padding">
+													<div class="text">AKK8800</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+										<div class="input_text_padding">
+											<div class="input_title">排氣量</div>
+											<div class="input_content">
+												<div class="input_text_padding">
+													<div class="text">2000</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+										<div class="input_text_padding">
+											<div class="input_title">製造年月</div>
+											<div class="input_content">
+												<div class="input_text_padding">
+													<div class="text">2006年11月</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+										<div class="input_text_padding">
+											<div class="input_title">發照日期</div>
+											<div class="input_content">
+												<div class="input_text_padding">
+													<div class="text">民國95年12月8號</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+										<div class="input_text_padding">
+											<div class="input_title">預定起保日</div>
+											<div class="input_content">
+												<div class="input_text_padding">
+													<div class="text">
+														<div>強制險預定生效日期：2019年09月09日 下午12時 起，保期一年。</div>
+														<div>任意險預定生效日期：2019年09月11日 下午18時 起，保期一年。</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--內容主要區塊-->
+	<div class="content_box relative have_bg">
+		<div class="bg_car right">
+			<img src="assets/images/car/bg_car.svg" alt="#">
+		</div>
+		<div class="content_rwd">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col_input col-12">
+						<div class="car_input_box">
+							<div class="col_title_box flexbox fac">
+								<div class="icon">
+									<img src="assets/images/car/icon_input_car.svg" alt="icon">
+								</div>
+								<div class="title_box">保障範圍</div>
+							</div>
+							<div class="x_scroll css_table top_data">
+								<table>
+									<thead>
+										<tr>
+											<th>
+												<span>身分證</span>
+												<span>F224567457</span>
+											</th>
+											<th>
+												<span>生日</span>
+												<span>100/01/01</span>
+											</th>
+											<th>
+												<span>車牌</span>
+												<span>ABC-1234</span>
+											</th>
+											<th>
+												<span>廠牌</span>
+												<span>BENZ賓士</span>
+											</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+							<div class="x_scroll css_table">
+								<table>
+									<thead>
+										<tr>
+											<th>保險種類</th>
+											<th>保障金額</th>
+											<th>自付額</th>
+											<th>保險費</th>
+											<th>優惠保費</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>31.第三人責任險(體傷)</td>
+											<td>
+												<div>每一個人NT$200萬，</div>
+												<div>每一事故NT$400萬(2倍)</div>
+											</td>
+											<td></td>
+											<td></td>
+											<td class="c_red">NT$1,131</td>
+										</tr>
+										<tr>
+											<td>31.第三人責任險(財損)</td>
+											<td>
+												<div>每一事故NT$50萬)</div>
+											</td>
+											<td></td>
+											<td></td>
+											<td class="c_red">NT$1,427</td>
+										</tr>
+										<tr>
+											<td>31.第三人責任險(體傷)</td>
+											<td>
+												<div>每一個人NT$200萬，</div>
+												<div>每一事故NT$400萬(2倍)</div>
+											</td>
+											<td></td>
+											<td></td>
+											<td class="c_red">NT$1,131</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="table_footer">
+								<div class="left_box table_bt flexbox fac">
+									<button type="button" class="button style_2 bt_color_3 pie">重新試算</button>
+								</div>
+								<div class="right_box flexbox fac"><span>保費計算</span><span class="c_red">NT$4,349</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<form action="#" method="get">
+		<!--內容主要區塊-->
+		<div class="content_box relative have_bg">
+			<div class="bg_car right">
+				<img src="assets/images/car/bg_car.svg" alt="#">
+			</div>
+			<div class="content_rwd">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col_input col-xxl-8 col-xl-8 col-lg-10 col-sm-12 col-12">
+							<div class="car_input_box">
+								<div class="col_title_box flexbox fac">
+									<div class="icon">
+										<img src="assets/images/car/icon_input_car.svg" alt="icon">
+									</div>
+									<div class="title_box">被保險人(車主)</div>
+								</div>
+								<div class="input_type">
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">身份別</div>
+												<div class="input_content">
+													<div class="input_text_padding">
+														<div class="text">自然人</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">姓名</div>
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<div class="select_box">
+																<select name="#" required="">
+																	<option value="0">被保險人姓名</option>
+																	<option value="1"></option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">身分證號</div>
+												<div class="input_content">
+													<div class="input_text_padding">
+														<div class="text">A123456789</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">生日</div>
+												<div class="input_content">
+													<div class="input_text_padding">
+														<div class="text">民國87年3月8號</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">婚姻</div>
+												<div class="input_content">
+													<div class="input_text_padding">
+														<span class="checkbox_box">
+															<input id="radio05_1" type="radio" name="radio05" value="1">
+															<label for="radio05_1">未婚</label>
+														</span>
+														<span class="checkbox_box">
+															<input id="radio05_2" type="radio" name="radio05" value="2">
+															<label for="radio05_2">已婚</label>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">聯絡電話</div>
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<input type="tel" placeholder="" required="" class="placeholder" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">行動電話</div>
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<input type="tel" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">電子郵件</div>
+												<div class="input_email_box input_content">
+													<div class="input_email_box">
+														<div class="input_email no1 input_border style_2 pie">
+															<div class="input_padding">
+																<input type="text" placeholder="boweyzaxter717" class="placeholder" required="">
+															</div>
+														</div>
+														<div class="input_email no2 flexbox fjc fac">@</div>
+														<div class="input_email no3 input_border style_2 pie">
+															<div class="input_padding selector_automatic_completion selector_key">
+																<input type="text" placeholder="xxx.com" class="placeholder wx-input" required="">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_item col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">通訊地址</div>
+												<div class="input_content">
+													<div class="input_border input_1of3 style_2 pie">
+														<div class="input_padding">
+															<input type="tel" placeholder="郵遞區號" class="placeholder" required="">
+														</div>
+													</div>
+													<div class="input_border input_2of3 style_2 pie">
+														<div class="input_padding">
+															<div class="select_box">
+																<select name="#">
+																	<option value="0">縣市</option>
+																	<option value="1">台北市</option>
+																</select>
+															</div>
+														</div>
+													</div>
+													<div class="input_border input_3of3 style_2 pie">
+														<div class="input_padding">
+															<div class="select_box">
+																<select name="#">
+																	<option value="0">區域</option>
+																	<option value="1">大安區</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="input_text_padding">
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<input type="text" placeholder="地址" class="placeholder" required="">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">職業</div>
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<div class="select_box">
+																<select name="#" required="">
+																	<option value="0"></option>
+																	<option value="1" selected="">一般職業</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--內容主要區塊-->
+		<div class="content_box relative have_bg">
+			<div class="bg_car left">
+				<img src="assets/images/car/bg_car.svg" alt="#">
+			</div>
+			<div class="content_rwd">
+				<div class="container-fluid">
+					<div class="row justify-content-end">
+						<div class="col_input col-xxl-8 col-xl-8 col-lg-10 col-sm-12 col-12">
+							<div class="car_input_box">
+								<div class="col_title_box flexbox fac">
+									<div class="icon">
+										<img src="assets/images/car/icon_input_car.svg" alt="icon">
+									</div>
+									<div class="title_box">保單寄送方式</div>
+								</div>
+								<div class="input_type">
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title"></div>
+												<div class="input_content">
+													<div class="input_text_padding">
+														<span class="checkbox_box">
+															<input id="checkbox03_1" type="checkbox" name="checkbox03" value="1">
+															<label for="checkbox03_1">以簡訊或電子郵件取代電話抽樣訪問確認投保意願</label>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">保單類別</div>
+												<div class="input_content">
+													<div class="input_text_padding">
+														<span class="checkbox_box">
+															<input id="radio06_1" type="radio" name="radio06" value="1">
+															<label for="radio06_1">電子保單<span class="remarks">約3個工作日內</span></label>
+														</span>
+														<span class="checkbox_box">
+															<input id="radio06_2" type="radio" name="radio06" value="1">
+															<label for="radio06_2">紙本保單<span class="remarks">約7~10個工作日</span></label>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">寄送位置</div>
+												<div class="input_content">
+													<div class="input_text_padding">
+														<span class="checkbox_box">
+															<input id="radio07_1" type="radio" name="radio07" value="1">
+															<label for="radio07_1">同要保人</label>
+														</span>
+														<span class="checkbox_box">
+															<input id="radio07_2" type="radio" name="radio07" value="1">
+															<label for="radio07_2">同被保人</label>
+														</span>
+														<span class="checkbox_box">
+															<input id="radio07_3" type="radio" name="radio07" value="1">
+															<label for="radio07_3">其他</label>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_item col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">地址</div>
+												<div class="input_content">
+													<div class="input_border input_1of3 style_2 pie">
+														<div class="input_padding">
+															<input type="tel" placeholder="郵遞區號" class="placeholder">
+														</div>
+													</div>
+													<div class="input_border input_2of3 style_2 pie">
+														<div class="input_padding">
+															<div class="select_box">
+																<select name="#">
+																	<option value="0">縣市</option>
+																	<option value="1">台北市</option>
+																</select>
+															</div>
+														</div>
+													</div>
+													<div class="input_border input_3of3 style_2 pie">
+														<div class="input_padding">
+															<div class="select_box">
+																<select name="#">
+																	<option value="0">區域</option>
+																	<option value="1">大安區</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="input_text_padding">
+												<div class="input_content">
+													<div class="input_border style_2 pie">
+														<div class="input_padding">
+															<input type="text" placeholder="地址" class="placeholder" required="">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--內容主要區塊-->
+		<div class="content_box">
+			<div class="content_rwd">
+				<div class="container-fluid">
+					<div class="row justify-content-center">
+						<div class="col_input col-xxl-5 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<button type="button" class="button style_2 bt_color_2 pie" onclick="javascript:location.href='car_step_4.html'">上一步-設定投保內容</button>
+						</div>
+						<div class="col_input col-xxl-5 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<button type="submit" class="button style_2 bt_color_1 pie" onclick="javascript:location.href='car_step_6.html'">下一步-進行投保</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	<!---------------------------------------------------------------->
+	<!--內容主要區塊 下方空間-->
+	<div class="space_bottom_box"></div>
+	<!--ajax jquery include html-->
+	<div class="ajax_footer"></div>
+</body>
+
+</html>

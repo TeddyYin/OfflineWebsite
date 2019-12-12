@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" lang="zh-Hant-TW">
+	<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/images/general/favicon.ico">
+	<title>旺旺友聯網投 2.0</title>
+	<!-- jQuery -->
+	<script src="assets/plugin/jquery.min.js"></script>
+	<!-- ajax jquery include html -->
+	<script>
+	$(document).ready(function() {
+		/* ajax jquery include html */
+		$(".ajax_header").load("ajax_header.html");
+		$(".ajax_footer").load("ajax_footer.html");
+	});
+	</script>
+	<!-- Bootstrap v4.3 -->
+	<script src="assets/plugin/bootstrap/bootstrap.min.js"></script>
+	<link href="assets/plugin/bootstrap/bootstrap.css" rel="stylesheet">
+	<!-- Bootstrap 自定義 -->
+	<link href="assets/plugin/bootstrap/bootstrap-grid-customizing.css" rel="stylesheet">
+	<!-- jQuery UI -->
+	<link href="assets/plugin/jquery_ui/jquery-ui.min.css" rel="stylesheet">
+	<script src="assets/plugin/jquery_ui/jquery-ui.min.js"></script>
+	<!-- 日期選擇器_世界年與民國年：支援 jQuery UI -->
+	<script src="assets/plugin/datepicker_globe_tw.js"></script>
+	<!-- 搜全局輸入框：搜尋自動完成 -->
+	<script src="assets/plugin/plumen.js"></script>
+	<!-- 輪播：Swiper 支援IE10+ -->
+	<link href="assets/plugin/swiper.min.css" rel="stylesheet">
+	<script src="assets/plugin/swiper.min.js"></script>
+	<!-- 延遲加載圖像：Lazy Load 2 -->
+	<script src="assets/plugin/lazyload2.min.js"></script>
+	<!-- 自訂CSS樣式 -->
+	<link href="assets/css/type.css" rel="stylesheet">
+	<!-- 自訂JS樣式 -->
+	<script src="assets/js/type.js"></script>
+	<!-- Plug CSS樣式 -->
+	<link href="assets/css/type_plug.css" rel="stylesheet">
+</head>
+
+<body>
+	<!--ajax jquery include html-->
+	<div class="ajax_header"></div>
+	<!--內容主要區塊 上方空間-->
+	<div class="space_top_box"></div>
+	<!---------------------------------------------------------------->
+	<!--內容主要區塊-->
+	<div class="content_box">
+		<div class="content_rwd">
+			<div class="container-fluid">
+				<div class="row justify-content-center">
+					<div class="col_input col-xxl-7 col-xl-6 col-lg-6 col-sm-12 col-12">
+						<div class="title_type no2">
+							<div class="line_box flexbox fac">
+								<div>
+									<div class="title">會員資料</div>
+									<div class="text">您好！註冊完成後，即可享有網路投保專屬服務！</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col_input col-xxl-5 col-xl-6 col-lg-6 col-sm-12 col-12">
+						<div class="member_binding_box">
+							<div class="text">是否同步加入line好友及app會員</div>
+							<form action="#" method="get">
+								<div class="radio_box flexbox fjc fac">
+									<span class="checkbox_box flexbox fjc fac">
+										<img src="assets/images/general/icon_logo_binding.svg" alt="icon">
+									</span>
+									<span class="checkbox_box flexbox fjc fac">
+										<input id="checkbox00_3" type="checkbox" name="checkbox02" value="1">
+										<label for="checkbox00_3">&nbsp;</label>
+										<img src="assets/images/general/icon_logo_line.svg" alt="LINE">
+									</span>
+									<span class="checkbox_box flexbox fjc fac">
+										<input id="checkbox00_4" type="checkbox" name="checkbox02" value="2">
+										<label for="checkbox00_4">&nbsp;</label>
+										<img src="assets/images/general/icon_logo_eown.svg" alt="eown">
+									</span>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--內容主要區塊-->
+	<div class="content_box relative">
+		<div class="bg_absolute flexbox fjc fac">
+			<img src="assets/images/general/bg_signup.svg" alt="bg_signup">
+		</div>
+		<div class="content_rwd">
+			<form action="#" method="get">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col_input col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<div class="col_input">
+								<div class="input_title_box">
+									<span class="input_title">身分證字號</span>
+									<span class="input_title_required">*必填</span>
+								</div>
+								<div class="input_border style_2 pie">
+									<div class="input_padding">
+										<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*此證號已被使用')" oninput="setCustomValidity('')">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col_input col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<div class="col_input">
+								<div class="input_title_box">
+									<span class="input_title">性別</span>
+								</div>
+								<div class="input_button no1">
+									<span class="radio_bt_box">
+										<input id="radio01_1" type="radio" name="radio01" value="1">
+										<label for="radio01_1">男</label>
+									</span>
+								</div>
+								<div class="input_button no2">
+									<span class="radio_bt_box">
+										<input id="radio01_2" type="radio" name="radio01" value="1">
+										<label for="radio01_2">女</label>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col_input col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<div class="col_input">
+								<div class="input_title_box">
+									<span class="input_title">姓名</span>
+									<span class="input_title_required">*必填</span>
+								</div>
+								<div class="input_border style_2 pie">
+									<div class="input_padding">
+										<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col_input col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<div class="col_input">
+								<div class="input_title_box">
+									<span class="input_title">生日</span>
+									<span class="input_title_required">*必填</span>
+								</div>
+								<div class="input_border style_2 pie">
+									<div class="input_padding">
+										<div class="input_group">
+											<input class="datepicker placeholder" type="text" placeholder="請選擇日期" required="">
+											<span class="img_btn flexbox fjc fac">
+												<img src="assets/images/general/input_icon_date.svg" alt="#">
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col_input col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<div class="col_input">
+								<div class="input_title_box">
+									<span class="input_title">手機號碼</span>
+									<span class="input_title_required">*必填</span>
+									<!--備用
+									<span class="input_title_link flexbox fjc fac" onclick="javascript:location.href='xxxx.html'">
+										<span class="text_link">發送驗證網址</span>
+										<span class="input_icon_link">
+											<img src="assets/images/general/input_icon_link.svg" alt="link">
+										</span>
+									</span>
+									-->
+								</div>
+								<div class="input_border style_2 pie">
+									<div class="input_padding">
+										<input type="tel" placeholder="0912-345-678" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col_input col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<div class="col_input">
+								<div class="input_title_box">
+									<span class="input_title">電子郵件</span>
+									<span class="input_title_required">*必填</span>
+								</div>
+								<div class="input_email_box">
+									<div class="input_email no1 input_border style_2 pie">
+										<div class="input_padding">
+											<input type="text" placeholder="boweyzaxter717" class="placeholder" required="">
+										</div>
+									</div>
+									<div class="input_email no2 and flexbox fjc fac">@</div>
+									<div class="input_email no3 input_border style_2 pie">
+										<div class="input_padding selector_automatic_completion selector_key">
+											<input type="text" placeholder="xxx.com" class="placeholder wx-input" required="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col_input col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<div class="col_input">
+								<div class="input_title_box">
+									<span class="input_title">通訊地址</span>
+								</div>
+								<div class="input_border input_1of3 style_2 pie">
+									<div class="input_padding">
+										<input type="tel" placeholder="郵遞區號" class="placeholder">
+									</div>
+								</div>
+								<div class="input_border input_2of3 style_2 pie">
+									<div class="input_padding">
+										<div class="select_box">
+											<select name="#">
+												<option value="0">縣市</option>
+												<option value="1">台北市</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="input_border input_3of3 style_2 pie">
+									<div class="input_padding">
+										<div class="select_box">
+											<select name="#">
+												<option value="0">區域</option>
+												<option value="1">大安區</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="input_border style_2 pie">
+									<div class="input_padding">
+										<input type="text" placeholder="地址" class="placeholder">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col_input col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<div class="col_input">
+								<div class="input_title_box">
+									<span class="input_title">住家電話</span>
+								</div>
+								<div class="input_tel_box">
+									<div class="input_tel no1 input_border style_2 pie">
+										<div class="input_padding">
+											<input type="text" placeholder="" class="placeholder">
+										</div>
+									</div>
+									<div class="input_tel no2 and flexbox fjc fac">-</div>
+									<div class="input_tel no3 input_border style_2 pie">
+										<div class="input_padding">
+											<input type="text" placeholder="" class="placeholder">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col_input col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<div class="col_input">
+								<div class="input_title_box">
+									<span class="input_title">國籍</span>
+									<span class="input_title_required">*必填</span>
+								</div>
+								<div class="input_border input_1of2 style_2 pie">
+									<div class="input_padding">
+										<div class="select_box">
+											<select name="#" required="">
+												<option value="0">請選擇</option>
+												<option value="1">本國籍</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="input_border input_2of2 style_2 pie">
+									<div class="input_padding">
+										<div class="select_box">
+											<select name="#" required="">
+												<option value="0">請選擇</option>
+												<option value="1">台灣</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col_input col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<div class="col_input">
+								<div class="input_title_box">
+									<span class="input_title">職業</span>
+								</div>
+								<div class="input_border style_2 pie">
+									<div class="input_padding">
+										<div class="select_box">
+											<select name="#">
+												<option value="0">請選擇</option>
+												<option value="1">一般</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col_input col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<div class="col_input">
+								<div class="input_title_box">
+									<span class="input_title">是否為聽障人士</span>
+								</div>
+								<div class="input_border style_2 pie">
+									<div class="input_padding">
+										<div class="select_box">
+											<select name="#">
+												<option value="0">請選擇</option>
+												<option value="1">否</option>
+												<option value="2">是</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col_input col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<div class="col_input">
+								<div class="input_title_box">
+									<span class="input_title">婚姻狀況</span>
+								</div>
+								<div class="input_border style_2 pie">
+									<div class="input_padding">
+										<div class="select_box">
+											<select name="#">
+												<option value="0">請選擇</option>
+												<option value="1">未婚</option>
+												<option value="2">已婚</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col_input col-xxl-5 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<button type="submit" class="button style_2 bt_color_2 pie">儲存</button>
+						</div>
+						<div class="col_input col-xxl-5 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<button type="submit" class="button style_2 bt_color_1 pie">確定</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!---------------------------------------------------------------->
+	<!--內容主要區塊 下方空間-->
+	<div class="space_bottom_box"></div>
+	<!--ajax jquery include html-->
+	<div class="ajax_footer"></div>
+</body>
+
+</html>

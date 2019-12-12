@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" lang="zh-Hant-TW">
+	<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/images/general/favicon.ico">
+	<title>旺旺友聯網投 2.0</title>
+	<!-- jQuery -->
+	<script src="assets/plugin/jquery.min.js"></script>
+	<!-- ajax jquery include html -->
+	<script>
+	$(document).ready(function() {
+		/* ajax jquery include html */
+		$(".ajax_header").load("ajax_header.html");
+		$(".ajax_footer").load("ajax_footer.html");
+	});
+	</script>
+	<!-- Bootstrap v4.3 -->
+	<script src="assets/plugin/bootstrap/bootstrap.min.js"></script>
+	<link href="assets/plugin/bootstrap/bootstrap.css" rel="stylesheet">
+	<!-- Bootstrap 自定義 -->
+	<link href="assets/plugin/bootstrap/bootstrap-grid-customizing.css" rel="stylesheet">
+	<!-- jQuery UI -->
+	<link href="assets/plugin/jquery_ui/jquery-ui.min.css" rel="stylesheet">
+	<script src="assets/plugin/jquery_ui/jquery-ui.min.js"></script>
+	<!-- 日期選擇器_世界年與民國年：支援 jQuery UI -->
+	<script src="assets/plugin/datepicker_globe_tw.js"></script>
+	<!-- 搜全局輸入框：搜尋自動完成 -->
+	<script src="assets/plugin/plumen.js"></script>
+	<!-- 輪播：Swiper 支援IE10+ -->
+	<link href="assets/plugin/swiper.min.css" rel="stylesheet">
+	<script src="assets/plugin/swiper.min.js"></script>
+	<!-- 延遲加載圖像：Lazy Load 2 -->
+	<script src="assets/plugin/lazyload2.min.js"></script>
+	<!-- 自訂CSS樣式 -->
+	<link href="assets/css/type.css" rel="stylesheet">
+	<!-- 自訂JS樣式 -->
+	<script src="assets/js/type.js"></script>
+	<!-- Plug CSS樣式 -->
+	<link href="assets/css/type_plug.css" rel="stylesheet">
+</head>
+
+<body>
+	<!--ajax jquery include html-->
+	<div class="ajax_header"></div>
+	<!--內容主要區塊 上方空間-->
+	<div class="space_top_box"></div>
+	<!---------------------------------------------------------------->
+	<!--內容主要區塊 步驟流程-->
+	<div class="content_box">
+		<div class="content_rwd">
+			<div class="step_box">
+				<div class="car_box in1">
+					<div class="line"></div>
+					<img class="car" src="assets/images/car/icon_step_car.svg" alt="car">
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">車主概要</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">車籍資料</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">選擇方案</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">投保內容</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">要保資訊</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">付款投保</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<form action="#" method="get">
+		<!--內容主要區塊-->
+		<div class="content_box relative have_bg">
+			<div class="bg_car left">
+				<img src="assets/images/car/bg_car.svg" alt="#">
+			</div>
+			<div class="content_rwd">
+				<div class="container-fluid">
+					<div class="row justify-content-end">
+						<div class="col_input col-xxl-8 col-xl-8 col-lg-10 col-sm-12 col-12">
+							<div class="car_input_box">
+								<div class="col_title_box flexbox fac">
+									<div class="icon">
+										<img src="assets/images/car/icon_input_car.svg" alt="icon">
+									</div>
+									<div class="title_box">車主基本資料</div>
+								</div>
+								<div class="input_type">
+									<!--本國人 顯示-->
+									<div class="row">
+										<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+											<div class="input_text_padding">
+												<div class="input_title">身份別</div>
+												<div class="input_content">
+													<div class="input_content_padding">
+														<span class="checkbox_box">
+															<input id="radio01_1" type="radio" name="identity" class="identity" value="1" checked="">
+															<label for="radio01_1">本國人</label>
+														</span>
+														<span class="checkbox_box">
+															<input id="radio01_2" type="radio" name="identity" class="identity" value="2">
+															<label for="radio01_2">外國人</label>
+														</span>
+														<span class="checkbox_box">
+															<input id="radio01_3" type="radio" name="identity" class="identity" value="3">
+															<label for="radio01_3">法人</label>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="taiwanese">
+										<div class="row"></div>
+										<div class="row">
+											<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+												<div class="input_text_padding">
+													<div class="input_title">身份證資料</div>
+													<div class="input_content">
+														<div class="input_border style_2 pie">
+															<div class="input_padding">
+																<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+												<div class="input_text_padding">
+													<div class="input_title">生日(民國)</div>
+													<div class="input_content">
+														<div class="input_border style_2 pie">
+															<div class="input_padding">
+																<div class="input_group">
+																	<input class="mingo placeholder" type="tel" placeholder="" required="" />
+																	<span class="img_btn flexbox fjc fac">
+																		<img src="assets/images/general/input_icon_date.svg" alt="#">
+																	</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+												<div class="input_text_padding">
+													<div class="input_title">車輛總類</div>
+													<div class="input_content">
+														<div class="input_border style_2 pie">
+															<div class="input_padding">
+																<div class="select_box">
+																	<select name="#">
+																		<option value="0"></option>
+																		<option value="1"></option>
+																	</select>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+												<div class="input_text_padding">
+													<div class="input_title">車牌號碼</div>
+													<div class="input_car_box input_content">
+														<div class="input_car no1 input_border style_2 pie">
+															<div class="input_padding">
+																<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+															</div>
+														</div>
+														<div class="input_car no2 and flexbox fjc fac">-</div>
+														<div class="input_car no3 input_border input_2of2 style_2 pie">
+															<div class="input_padding">
+																<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+												<div class="input_text_padding">
+													<div class="input_title">活動代碼</div>
+													<div class="input_content">
+														<div class="input_border style_2 pie">
+															<div class="input_padding">
+																<input type="text" placeholder="若無活動代碼毋須填寫" class="placeholder" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--/本國人 顯示-->
+									<!--外國人-->
+									<div class="foreign off">
+										<div class="row"></div>
+										<div class="row">
+											<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+												<div class="input_text_padding">
+													<div class="input_title">護照號碼</div>
+													<div class="input_content">
+														<div class="input_border style_2 pie">
+															<div class="input_padding">
+																<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+												<div class="input_text_padding">
+													<div class="input_title">生日(民國)</div>
+													<div class="input_content">
+														<div class="input_border style_2 pie">
+															<div class="input_padding">
+																<div class="input_group">
+																	<input class="mingo placeholder" type="tel" placeholder="" required="" />
+																	<span class="img_btn flexbox fjc fac">
+																		<img src="assets/images/general/input_icon_date.svg" alt="#">
+																	</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+												<div class="input_text_padding">
+													<div class="input_title">車輛總類</div>
+													<div class="input_content">
+														<div class="input_border style_2 pie">
+															<div class="input_padding">
+																<div class="select_box">
+																	<select name="#">
+																		<option value="0"></option>
+																		<option value="1"></option>
+																	</select>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+												<div class="input_text_padding">
+													<div class="input_title">車牌號碼</div>
+													<div class="input_car_box input_content">
+														<div class="input_car no1 input_border style_2 pie">
+															<div class="input_padding">
+																<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+															</div>
+														</div>
+														<div class="input_car no2 and flexbox fjc fac">-</div>
+														<div class="input_car no3 input_border input_2of2 style_2 pie">
+															<div class="input_padding">
+																<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+												<div class="input_text_padding">
+													<div class="input_title">活動代碼</div>
+													<div class="input_content">
+														<div class="input_border style_2 pie">
+															<div class="input_padding">
+																<input type="text" placeholder="若無活動代碼毋須填寫" class="placeholder" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--/外國人-->
+									<!--法人-->
+									<div class="legal_person off">
+										<div class="row"></div>
+										<div class="row">
+											<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+												<div class="input_text_padding">
+													<div class="input_title">統一編號</div>
+													<div class="input_content">
+														<div class="input_border style_2 pie">
+															<div class="input_padding">
+																<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+												<div class="input_text_padding">
+													<div class="input_title">生日(民國)</div>
+													<div class="input_content">
+														<div class="input_border style_2 pie">
+															<div class="input_padding">
+																<div class="input_group">
+																	<input class="mingo placeholder" type="tel" placeholder="" required="" />
+																	<span class="img_btn flexbox fjc fac">
+																		<img src="assets/images/general/input_icon_date.svg" alt="#">
+																	</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+												<div class="input_text_padding">
+													<div class="input_title">車輛總類</div>
+													<div class="input_content">
+														<div class="input_border style_2 pie">
+															<div class="input_padding">
+																<div class="select_box">
+																	<select name="#">
+																		<option value="0"></option>
+																		<option value="1"></option>
+																	</select>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+												<div class="input_text_padding">
+													<div class="input_title">車牌號碼</div>
+													<div class="input_car_box input_content">
+														<div class="input_car no1 input_border style_2 pie">
+															<div class="input_padding">
+																<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+															</div>
+														</div>
+														<div class="input_car no2 and flexbox fjc fac">-</div>
+														<div class="input_car no3 input_border input_2of2 style_2 pie">
+															<div class="input_padding">
+																<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+												<div class="input_text_padding">
+													<div class="input_title">活動代碼</div>
+													<div class="input_content">
+														<div class="input_border style_2 pie">
+															<div class="input_padding">
+																<input type="text" placeholder="若無活動代碼毋須填寫" class="placeholder" oninvalid="setCustomValidity('*必填')" oninput="setCustomValidity('')">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!--/法人-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--內容主要區塊-->
+		<div class="content_box">
+			<div class="content_rwd">
+				<div class="container-fluid">
+					<div class="row justify-content-center">
+						<div class="col_input col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+							<div class="tag_action_box">
+								<div class="tag_box">
+									<div class="tag no1">
+										<span class="checkbox_box">
+											<input id="checkbox02_1" type="checkbox" name="checkbox02" value="1">
+											<label for="checkbox02_1">&nbsp;網路投保聲明事項</label>
+										</span>
+									</div>
+									<div class="tag no2">
+										<span class="checkbox_box">
+											<input id="checkbox02_2" type="checkbox" name="checkbox02" value="2">
+											<label for="checkbox02_2">&nbsp;履行個資法義務內容</label>
+										</span>
+									</div>
+								</div>
+								<div class="tag_content_box">
+									<div class="tag_content no1">
+										<div class="text">
+											【要保人與被保險人聲明事項】
+											<br>1.本人(被保險人)同意旺旺友聯產物保險股份有限公司(以下簡稱貴公司)得蒐集、處理及利用本人相關之健康檢查、醫療及病歷個人資料。（僅傷害險適用）
+											<br>2.本人（被保險人/要保人）同意貴公司將本要保資料所載本人資料轉送產、壽險公會建立電腦系統連線，並同意產、壽險公會之會員公司查詢本人在該系統之資料以作為核保及理賠之參考，但各該公司仍應依其本身之核保或理賠標準決定是否承保或理賠，不得僅以前開資料作為承保或理賠之依據。
+											<br>3.本人（被保險人/要保人）已審閱並瞭解貴公司所提供之「線上投保注意事項」、「投保須知」、「保單條款」和「旺旺友聯(股)公司聲明事項」，另依「產險業履行個人資料保護法告知義務內容」，本人已瞭解 貴公司蒐集、處理及利用本人個人資料之目的及用途。
+											<br>4.本人（被保險人/要保人）同意貴公司就本人之個人資料，於「個人資料保護法」所規定之範圍內，有為蒐集、處理及利用之權利。
+											<br>5.本人（被保險人、要保人）已知悉並明瞭實支實付型傷害醫療保險之受益人，除下列情形外，申領保險金給付時須檢具醫療費用收據正本：
+											<br>(1) 已投保貴公司二張以上之商業實支實付型傷害醫療保險。
+											<br>(2) 本人於投保時已通知貴公司有投保其他商業實支實付型傷害醫療保險，而貴公司仍承保者。
+											本人同意，如有重複投保商業實支實付型傷害醫療保險而未通知貴公司者，貴公司對同一保險事故中已獲得全民健康保險或其他人身保險契約給付的部分不負給付責任。（僅傷害險適用）
+											<br><br><br>【線上投保注意事項】
+											<br>1.符合網路投保流程:要保人完成網路投保後，本公司網站客服人員將依規定，於保單寄發前進行抽樣電訪，且要保人同意本公司進行全程錄音並備份存檔。
+											<br>2.不符合網路投保流程:為符合法規要求,請您列印要保書後2個工作日內簽名回傳,以完成要保程序。
+											<br>3.核保完成後，若您選擇紙本保單:將會於7個工作天內將您的保單及收據郵寄至通訊地址。若您選擇電子保單:將會於3個工作天內將您的保單及收據郵寄至您的email信箱，我們將不會再郵寄紙本保單或保險證給您，車險「電子式保險證」也可以辦理監理業務。
+											<br>4.我們將提醒您續保通知、線上投保優惠活動與商品資訊等訊息，若您不想收到此優惠訊息請來信讓我們知道。
+											<br>5.本人已了解保險法第51條規定，亦即保險契約訂立時，保險標的之危險已發生或已消滅者，其契約無效。
+											<br>6.車險新件或斷保件，若有投保車體/竊盜險，2個工作日內將有專人與您聯繫勘車事宜，請確認手機保持暢通並留意陌生電話，要/被保人若無法配合勘車，「同意」系統於生效日2個工作天後自動取消該筆資料交易。
+											<br>7.車險投保以系統記錄登入完成交易時間及勘車後時間(新件或斷保件，投保項目含車體竊盜需勘車)為準，於上開時間前所發生之事故，本公司不負賠償責任。
+											<br>8.「旺旺友聯產物傷害保險恐怖主義行為保險限額給付附加條款」 (99.02.24(99)旺總企字第0233號函備查)內容約定最高給付金額為新台幣200萬元。
+											<br>9.身故保險金受益人如係身分別之指定及如有要保人不同意填寫受益人之連絡地址及電話之情形，則以要保人最後所留之連絡方式，作為日後身故保險金受益人之通知依據。
+											<br>10. 線上投保前請詳加閱讀投保商品之條款說明，減少爭議產生之情事。
+											<br><br><br>【旺旺友聯產物保險股份有限公司(以下稱本公司)聲明事項】
+											<br>1.本商品經本公司合格簽署人員檢視其內容業已符合保險精算原則及保險法令，惟為確保權益，基於保險業與消費者衡平對等原則，消費者仍應詳加閱讀保險單條款與相關文件，審慎選擇保險商品。本商品如有虛偽不實或違法情事，應由本公司及負責人依法負責。
+											<br>2.強制險相關欄位，僅為提醒保戶維持強制險之有效性及檢視保障之完整性。強制汽車責任保險訂定仍須依強制汽車責任保險法施行細則第四條辦理。
+											<br>3.本公司保留承保與否之權利。其他未盡詳細事項，依保單條款辦理。
+											<br>4.投保後解約或不繼續繳費可能不利消費者，請慎選符合需求之保險商品。
+											<br>5.保險契約各項權利義務皆詳列於保單條款，消費者務必詳加閱讀了解。
+											<br>6.如需參考其他相關商品資訊，可查閱本公司網站或洽服務人員辦理。
+											<br><br>※本商品經本公司合格簽署人員檢視其內容業已符合保險精算原則及保險法令，惟為確保權益，基於保險業與消費者衡平對等原則，消費者仍應詳加閱讀保險單條款與相關文件，審慎選擇保險商品。本商品如有虛偽不實或違法情事，應由本公司及負責人依法負責。
+											<br>※投保後解約或不繼續繳費可能不利消費者，請慎選符合需求之保險商品。
+											<br>※保險契約各項權利義務皆詳列於保單條款，消費者務必詳加閱讀了解。
+											<br>※如需參考其他相關商品資訊，可查閱本公司網站或洽服務人員辦理。
+											<br><br>此強制險相關欄位，僅為提醒保戶維持強制險之有效性及檢視保障之完整性。強制汽車責任保險訂定仍須依強制汽車責任保險法施行細則第四條辦理。
+											<br><br><br>【要/被保人投保須知】
+											<br>茲依「金融消費者保護法」及「金融服務業提供金融商品或服務前說明契約重要內容及揭露風險辦法」之規定，旺旺友聯產物保險股份有險公司(下稱本公司)敬告要（被）保險人於投保前須特別注意下列事項：
+											<br>一、告知義務：要保人及被保險人應誠實告知，對於承保資料應據實填寫，若有填寫不實或疏漏，違反保險法第64條告知義務時，保險公司得解除契約;保險事故發生亦同，影響保險契約之效力，由要(被)保險人自行負責。
+											<br>二、要（被）保險人對於保險契約權利行使、變更、解除及終止之方式：
+											<br>(一) 權利行使： 被保險人於保險期間內發生保險事故並致生損害時，應依保險法相關法令與投保商品契約條款之規定及程序，向本公司辦理理賠事宜。
+											<br>(二) 契約變更： 1.要保人得隨時向本公司提出契約變更，除法令另有規定或契約另有約定者外，非經雙方書面同意且經本公司簽批者不生效力。 2.保險契約條款有停效約定者，本公司於契約停效期間不負給付保險金責任。
+											<br>(三) 契約解除及終止： 1.保險契約當事人之一方違背特約條款時，他方得解除契約；其危險發生後亦同。 2.保險契約得經要保人通知而終止之，保險契約終止時，本公司應從當期已繳保險費扣除按短期費率計算已經過期間之保險費後，將未滿期保險費退還要保人，相關計算方式請詳閱保單條款。
+											<br>三、本公司對於保險契約之重要權利、義務及責任：本公司依據經主管機關核定之各項保險費率收取保險費，在承保危險事故發生時，依相關法令、契約條款之約定及承保之責任，對請求權人、被保險人或受益人負賠償之義務。
+											<br>四、要(被)保險人應負擔之費用及違約金(包括收取時間、計算及收取方式)：要（被）保險人除繳交保險費外，無須繳交其他任何費用及違約金。
+											<br>五、本公司保險商品悉依保險相關法令辦理，並受有財產保險安定基金之保障。
+											<br>六、因本保險商品或服務所生紛爭之處理及申訴管道：
+											<br>(一) 本公司免費申訴電話 0800-024-024 。
+											<br>(二) 公開資訊網址：http://www.wwunion.com
+										</div>
+									</div>
+									<div class="tag_content no2 off">
+										<div class="text">
+											產險業履行個人資料保護法告知義務內容
+											<br><br>旺旺友聯產物保險(以下稱本公司)依據個人資料保護法（以下稱個資法）第八條第一項（如為間接蒐集之個人資料則為第九條第一項）規定，向 台端告知下列事項，敬請詳閱：
+											<br><br>一、 蒐集目的：
+											<br>(一) 財產保險【093】
+											<br>(二) 人身保險【001】
+											<br>(三) 其他經營合於營業登記項目或組織章程所訂之業務【181】
+											<br>(四) 消費者、客戶管理與服務【090】
+											<br><br>二、 蒐集之個人資料類別：一般個資(包括但不限於姓名、出生年月日、身分證統一編號、護照號碼、婚姻、職業、聯絡方 式、財務情況及其他得以直接或間接方式識別個人之資料，詳如相關業務申請書或契約書內 容)、特種個資(病歷、醫療、健康檢查等，在法令許可範圍內者)。
+											<br><br>三、 個人資料之來源：
+											<br>(一) 要保人/被保險人。
+											<br>(二) 司法警憲機關、委託協助處理理賠之公證人或機構。
+											<br>(三) 當事人之法定代理人、輔助人。
+											<br>(四) 各醫療院所。
+											<br>(五) 與第三人共同行銷、交互運用客戶資料、合作推廣等關係、或於本公司各項業務內所委託往來之第三人。
+											<br><br>四、 個人資料利用之期間、地區、對象及方式：
+											<br>(一) 期間：提供金融商品暨其服務之契約期間、本公司因執行業務所必須及依法令規定應為保存之期間。
+											<br>(二) 地區： 1.中華民國境內。 2.因辦理財產保險相關業務需要之第三人所在境外地區。 3.下述對象所在之地區。
+											<br>(三) 對象：本公司及本公司各分支機構、財團法人保險事業發展中心、中華民國產物保險商業同業公會、中華民國人壽保險商業同業公會、關貿網路股份有限公司、財團法人住宅地震保險基金、財團法人金融消費評議中心、財團法人保險安定基金、財團法人汽車交通事故特別補償基金、財團法人金融聯合徵信中心、財團法人聯合信用卡中心、台灣票據交換所、財金資訊公司、中央健康保險局、本公司業務委外機構及再保業務往來之公司、依法有調查權機關或金融監理機關。
+											<br>(四) 方式：符合個資法暨其相關法令規定之利用方式。
+											<br><br>五、 依據個資法第三條規定，台端就本公司保有 台端之個人資料得行使之權利及方式：
+											<br>(一) 得向本公司行使之權利：
+											<br>1. 向本公司查詢、請求閱覽或請求製給複製本。
+											<br>2. 向本公司請求補充或更正。
+											<br>3. 向本公司請求停止蒐集、處理或利用及請求刪除。
+											<br>(二) 行使權利之方式：以書面或其他日後可供證明之方式。
+											<br><br>六、 台端不提供個人資料所致權益之影響：台端若未能提供相關個人資料時，將可能致使本公司延後或無法進行必要之審核及處理作業，因此可能婉謝承保、遲延或無法提供台端相關服務或給付。(視業務性質記載)。
+											<br><br>【註】：
+											<br>1.上開告知事項已公告於本公司官網（https://www.wwunion.com/），如有任何問題歡 迎洽 詢本公司 0800-024-024 免付費客服專線。
+											<br>2. 本告知事項內容若有更動，係以官網公告版本為準。
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--內容主要區塊-->
+		<div class="content_box">
+			<div class="content_rwd">
+				<div class="container-fluid">
+					<div class="row justify-content-center">
+						<div class="col_input col-xxl-5 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<button type="button" class="button style_2 bt_color_2 pie" onclick="javascript:location.href='car_index.html'">網投首頁</button>
+						</div>
+						<div class="col_input col-xxl-5 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<button type="submit" class="button style_2 bt_color_1 pie" onclick="javascript:location.href='car_step_2.html'">下一步-輸入車籍資料</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	<!---------------------------------------------------------------->
+	<!--內容主要區塊 下方空間-->
+	<div class="space_bottom_box"></div>
+	<!--ajax jquery include html-->
+	<div class="ajax_footer"></div>
+</body>
+
+</html>
