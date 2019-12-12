@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" lang="zh-Hant-TW">
+	<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/images/general/favicon.ico">
+	<title>旺旺友聯網投 2.0</title>
+	<!-- jQuery -->
+	<script src="assets/plugin/jquery.min.js"></script>
+	<!-- ajax jquery include html -->
+	<script>
+	$(document).ready(function() {
+		/* ajax jquery include html */
+		$(".ajax_header").load("ajax_header.html");
+		$(".ajax_footer").load("ajax_footer.html");
+	});
+	</script>
+	<!-- Bootstrap v4.3 -->
+	<script src="assets/plugin/bootstrap/bootstrap.min.js"></script>
+	<link href="assets/plugin/bootstrap/bootstrap.css" rel="stylesheet">
+	<!-- Bootstrap 自定義 -->
+	<link href="assets/plugin/bootstrap/bootstrap-grid-customizing.css" rel="stylesheet">
+	<!-- jQuery UI -->
+	<link href="assets/plugin/jquery_ui/jquery-ui.min.css" rel="stylesheet">
+	<script src="assets/plugin/jquery_ui/jquery-ui.min.js"></script>
+	<!-- 日期選擇器_世界年與民國年：支援 jQuery UI -->
+	<script src="assets/plugin/datepicker_globe_tw.js"></script>
+	<!-- 搜全局輸入框：搜尋自動完成 -->
+	<script src="assets/plugin/plumen.js"></script>
+	<!-- 輪播：Swiper 支援IE10+ -->
+	<link href="assets/plugin/swiper.min.css" rel="stylesheet">
+	<script src="assets/plugin/swiper.min.js"></script>
+	<!-- 延遲加載圖像：Lazy Load 2 -->
+	<script src="assets/plugin/lazyload2.min.js"></script>
+	<!-- 自訂CSS樣式 -->
+	<link href="assets/css/type.css" rel="stylesheet">
+	<!-- 自訂JS樣式 -->
+	<script src="assets/js/type.js"></script>
+	<!-- Plug CSS樣式 -->
+	<link href="assets/css/type_plug.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="hor_level_menu on">
+		<div class="left_box flexbox fjc fac">
+			<div class="logo_box">
+				<a class="logo" href="index.html">
+					<img src="assets/images/general/logo.svg" alt="首頁">
+				</a>
+				<a class="logo_sub" href="#">
+					<img src="assets/images/general/logo_sub.svg" alt="e指保">
+				</a>
+			</div>
+			<div class="menu_button_show">
+				<img src="assets/images/general/menu_button_show.svg" alt="選單按鈕">
+			</div>
+		</div>
+		<div class="menu_layer">
+			<ul>
+				<li class="member_name">
+					<pre>Queena Chin 您好</pre>
+				</li>
+				<li>
+					<div class="item_title">
+						<a href="index.html">
+							<img class="icon_menu" src="assets/images/general/icon_menu_0.svg" alt="#">
+							<img class="icon_menu off" src="assets/images/general/icon_menu_0_h.svg" alt="#">
+							<span>首頁</span>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="item_title">
+						<a href="#">
+							<img class="icon_menu" src="assets/images/general/icon_menu_1.svg" alt="#">
+							<img class="icon_menu off" src="assets/images/general/icon_menu_1_h.svg" alt="#">
+							<span>最新活動</span>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="item_title">
+						<a href="#">
+							<img class="icon_menu" src="assets/images/general/icon_menu_2.svg" alt="#">
+							<img class="icon_menu off" src="assets/images/general/icon_menu_2_h.svg" alt="#">
+							<span>汽車險</span>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="item_title">
+						<a href="#">
+							<img class="icon_menu" src="assets/images/general/icon_menu_3.svg" alt="#">
+							<img class="icon_menu off" src="assets/images/general/icon_menu_3_h.svg" alt="#">
+							<span>機車險</span>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="item_title">
+						<a href="#">
+							<img class="icon_menu" src="assets/images/general/icon_menu_4.svg" alt="#">
+							<img class="icon_menu off" src="assets/images/general/icon_menu_4_h.svg" alt="#">
+							<span>旅平險</span>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="item_title">
+						<a href="#">
+							<img class="icon_menu" src="assets/images/general/icon_menu_5.svg" alt="#">
+							<img class="icon_menu off" src="assets/images/general/icon_menu_5_h.svg" alt="#">
+							<span>住宅火險</span>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="item_title">
+						<a href="login.html">
+							<img class="icon_menu" src="assets/images/general/icon_menu_6.svg" alt="#">
+							<img class="icon_menu off" src="assets/images/general/icon_menu_6_h.svg" alt="#">
+							<span>會員中心</span>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script>
+	/* 寬度判斷事件 選單 行動版*/
+	$(document).ready(str_menu);
+	$(window).on("resize", str_menu);
+
+	function str_menu() {
+
+		/* 大裝置 */
+		if ($(window).width() > 1000) {
+
+			/* 還原預設值 */
+			$(".menu_layer").show();
+			$(".menu_layer ul").css({ left: "0%" });
+
+			/* 事件 */
+			return false;
+
+		}
+
+		/* 小裝置 */
+		if ($(window).width() <= 1000) {
+
+			/* 還原預設值 */
+			$(".menu_layer").hide();
+			$(".menu_layer ul").css({ left: "-260px" });
+
+			/* 事件 */
+			$(".menu_button_show").click(function() {
+				$(".menu_layer").stop(true, false);
+				$(".menu_layer").show();
+				$(".menu_layer ul").stop(true, false);
+				$(".menu_layer ul").animate({ left: "0%" }, 500);
+			});
+			$(".menu_layer").click(function() {
+				$(".menu_layer").stop(true, false);
+				$(".menu_layer").hide();
+				$(".menu_layer ul").stop(true, false);
+				$(".menu_layer ul").animate({ left: "-260px" }, 500);
+			});
+
+			return false;
+
+		}
+
+	}
+
+	/******************************************************************/
+
+	$(document).ready(function() {
+
+
+		/* 選單 hover */
+		$(".menu_layer .item_title").hover(
+			function() {
+				$(this).children().children(".icon_menu").hide();
+				$(this).children().children(".icon_menu.off").show();
+				$(this).children().children("span").addClass("action");
+			},
+			function() {
+				$(this).children().children(".icon_menu").show();
+				$(this).children().children(".icon_menu.off").hide();
+				$(this).children().children("span").removeClass("action");
+			}
+		);
+
+
+		/* 停用行動版放大功能 */
+		window.onload = function() {
+			document.addEventListener('touchstart', function(event) {
+				if (event.touches.length > 1) {
+					event.preventDefault();
+				}
+			});
+			var lastTouchEnd = 0;
+			document.addEventListener('touchend', function(event) {
+				var now = (new Date()).getTime();
+				if (now - lastTouchEnd <= 300) {
+					event.preventDefault();
+				}
+				lastTouchEnd = now;
+			}, false);
+			document.addEventListener('gesturestart', function(event) {
+				event.preventDefault();
+			});
+		}
+
+
+	});
+	</script>
+	<!---------------------------------------------------------------->
+	<!--內容主要區塊 輪播事件：Swiper 大輪播樣式-->
+	<div class="content_box index_banner flexbox fjc fac">
+		<div class="swiper_box style_full">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<a href="#" class="swiper-slide flexbox fjc fac">
+						<img src="assets/images/index/banner_top_0.jpg" alt="輪播">
+					</a>
+					<a href="#" class="swiper-slide flexbox fjc fac">
+						<img src="assets/images/index/banner_top_0.jpg" alt="輪播">
+					</a>
+					<a href="#" class="swiper-slide flexbox fjc fac">
+						<img src="assets/images/index/banner_top_0.jpg" alt="輪播">
+					</a>
+					<a href="#" class="swiper-slide flexbox fjc fac">
+						<img src="assets/images/index/banner_top_0.jpg" alt="輪播">
+					</a>
+					<a href="#" class="swiper-slide flexbox fjc fac">
+						<img src="assets/images/index/banner_top_0.jpg" alt="輪播">
+					</a>
+					<a href="#" class="swiper-slide flexbox fjc fac">
+						<img src="assets/images/index/banner_top_0.jpg" alt="輪播">
+					</a>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<!--內容主要區塊 Bootstrap網格系統 活動/跑馬燈-->
+	<div class="content_box index_activity_box">
+		<div class="content_rwd">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xl-4 col-lg-4 col-sm-6 col-12">
+						<a href="#" class="index_activity index_title_activity flexbox fjc fac">您目前沒有參與任何活動，請參考活動</a>
+					</div>
+					<div class="col-xl-8 col-lg-8 col-sm-6 col-12">
+						<div class="swiper_box style_arquee index_title_arquee flexbox fac">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<a href="#" class="swiper-slide fwb">1.今天天氣很好，明天天氣很好，後天天氣很好，大後天天氣很好，每天天氣都很好。</a>
+									<a href="#" class="swiper-slide fwb">2.今天天氣很好，明天天氣很好，後天天氣很好，大後天天氣很好，每天天氣都很好。</a>
+									<a href="#" class="swiper-slide fwb">3.今天天氣很好，明天天氣很好，後天天氣很好，大後天天氣很好，每天天氣都很好，每年天氣都很好。</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--內容主要區塊 首頁行動版BAR-->
+	<div class="content_box quick_key_bar">
+		<div class="lift_box">
+			<div class="line"></div>
+			<div class="box m_bgcolor_1"></div>
+		</div>
+		<div class="icon">
+			<div class="icon_left">
+				<img class="left_default" src="assets/images/index/quick_bar_left_default.svg" alt="#">
+				<img class="left_open off" src="assets/images/index/quick_bar_left_open.svg" alt="#">
+			</div>
+			<div class="icon_right">
+				<img class="right_default" src="assets/images/index/quick_bar_right_default.svg" alt="#">
+				<img class="right_open off" src="assets/images/index/quick_bar_right_open.svg" alt="#">
+			</div>
+		</div>
+		<div class="right_box">
+			<div class="box m_bgcolor_1"></div>
+			<div class="line"></div>
+		</div>
+		<div class="action_box">
+			<div class="bt_action action_left flexbox fjc fac">時事分享</div>
+			<div class="bt_action action_right flexbox fjc fac">常用功能</div>
+		</div>
+	</div>
+	<!--區塊排序-->
+	<div class="order_box">
+		<!--內容主要區塊 首頁快速鍵-->
+		<div class="content_box index_quick_key_box">
+			<div class="content_rwd quick_key_bg">
+				<div class="quick_key index_title_quick_key">
+					<a href="#" class="item">
+						<div class="icon flexbox fjc fac">
+							<img class="icon_d" src="assets/images/index/quick_key_icon_d_0.svg" alt="#">
+							<img class="icon_m" src="assets/images/index/quick_key_icon_m_0.svg" alt="#">
+						</div>
+						<div class="text_box flexbox fjc fac">電子證/電子保單</div>
+					</a>
+					<a href="#" class="item">
+						<div class="icon flexbox fjc fac">
+							<img class="icon_d" src="assets/images/index/quick_key_icon_d_1.svg" alt="#">
+							<img class="icon_m" src="assets/images/index/quick_key_icon_m_1.svg" alt="#">
+						</div>
+						<div class="text_box flexbox fjc fac">投保資料變更</div>
+					</a>
+					<a href="#" class="item">
+						<div class="icon flexbox fjc fac">
+							<img class="icon_d" src="assets/images/index/quick_key_icon_d_2.svg" alt="#">
+							<img class="icon_m" src="assets/images/index/quick_key_icon_m_2.svg" alt="#">
+						</div>
+						<div class="text_box flexbox fjc fac">會員資料維護</div>
+					</a>
+					<a href="#" class="item">
+						<div class="icon flexbox fjc fac">
+							<img class="icon_d" src="assets/images/index/quick_key_icon_d_3.svg" alt="#">
+							<img class="icon_m" src="assets/images/index/quick_key_icon_m_3.svg" alt="#">
+						</div>
+						<div class="text_box flexbox fjc fac">投保後查詢</div>
+					</a>
+					<a href="#" class="item">
+						<div class="icon flexbox fjc fac">
+							<img class="icon_d" src="assets/images/index/quick_key_icon_d_4.svg" alt="#">
+							<img class="icon_m" src="assets/images/index/quick_key_icon_m_4.svg" alt="#">
+						</div>
+						<div class="text_box flexbox fjc fac">車險事故通知</div>
+					</a>
+					<a href="#" class="item">
+						<div class="icon flexbox fjc fac">
+							<img class="icon_d" src="assets/images/index/quick_key_icon_d_5.svg" alt="#">
+							<img class="icon_m" src="assets/images/index/quick_key_icon_m_5.svg" alt="#">
+						</div>
+						<div class="text_box flexbox fjc fac">理賠進度查詢</div>
+					</a>
+					<a href="#" class="item">
+						<div class="icon flexbox fjc fac">
+							<img class="icon_d" src="assets/images/index/quick_key_icon_d_6.svg" alt="#">
+							<img class="icon_m" src="assets/images/index/quick_key_icon_m_6.svg" alt="#">
+						</div>
+						<div class="text_box flexbox fjc fac">表單下載</div>
+					</a>
+					<a href="#" class="item">
+						<div class="icon flexbox fjc fac">
+							<img class="icon_d" src="assets/images/index/quick_key_icon_d_7.svg" alt="#">
+							<img class="icon_m" src="assets/images/index/quick_key_icon_m_7.svg" alt="#">
+						</div>
+						<div class="text_box flexbox fjc fac">客戶QA</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--內容主要區塊 首頁線上投保商品-->
+		<div class="content_box index_commodity_box">
+			<div class="content_rwd">
+				<div class="index_title_box flexbox fjc fac">
+					<span class="icon_title">
+						<img src="assets/images/index/icon_title.svg" alt="#">
+					</span>
+					<span class="index_title">線 上 投 保 商 品</span>
+				</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xl-3 col-lg-3 col-sm-6 col-6">
+							<div class="item">
+								<div class="commodity_img flexbox fjc fac">
+									<img src="assets/images/index/commodity_0.jpg" alt="#">
+									<div class="cover_color"></div>
+								</div>
+								<div class="bg_action"></div>
+								<div class="text_item flexbox fjc fac">
+									<div class="text_item_center">
+										<pre class="commodity_title">機 車 險</pre>
+										<div class="commodity_link flexbox fjc fac">
+											<a href="#" class="commodity_link_bt flexbox fjc fac">
+												<div class="commodity_link_text">立即投保</div>
+												<img class="default" src="assets/images/index/icon_commodity_d.svg" alt="link">
+												<img class="hover off" src="assets/images/index/icon_commodity_h.svg" alt="link">
+											</a>
+										</div>
+										<pre class="description_text off">青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵陽紅。</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-3 col-sm-6 col-6">
+							<div class="item">
+								<div class="commodity_img flexbox fjc fac">
+									<img src="assets/images/index/commodity_1.jpg" alt="#">
+									<div class="cover_color"></div>
+								</div>
+								<div class="bg_action"></div>
+								<div class="text_item flexbox fjc fac">
+									<div class="text_item_center">
+										<pre class="commodity_title">汽 車 險</pre>
+										<div class="commodity_link flexbox fjc fac">
+											<a href="#" class="commodity_link_bt flexbox fjc fac">
+												<div class="commodity_link_text">立即投保</div>
+												<img class="default" src="assets/images/index/icon_commodity_d.svg" alt="link">
+												<img class="hover off" src="assets/images/index/icon_commodity_h.svg" alt="link">
+											</a>
+										</div>
+										<pre class="description_text off">青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵陽紅。</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-3 col-sm-6 col-6">
+							<div class="item">
+								<div class="commodity_img flexbox fjc fac">
+									<img src="assets/images/index/commodity_2.jpg" alt="#">
+									<div class="cover_color"></div>
+								</div>
+								<div class="bg_action"></div>
+								<div class="text_item flexbox fjc fac">
+									<div class="text_item_center">
+										<pre class="commodity_title">旅 平 險</pre>
+										<div class="commodity_link flexbox fjc fac">
+											<a href="#" class="commodity_link_bt flexbox fjc fac">
+												<div class="commodity_link_text">立即投保</div>
+												<img class="default" src="assets/images/index/icon_commodity_d.svg" alt="link">
+												<img class="hover off" src="assets/images/index/icon_commodity_h.svg" alt="link">
+											</a>
+										</div>
+										<pre class="description_text off">青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵陽紅。</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-3 col-sm-6 col-6">
+							<div class="item">
+								<div class="commodity_img flexbox fjc fac">
+									<img src="assets/images/index/commodity_3.jpg" alt="#">
+									<div class="cover_color"></div>
+								</div>
+								<div class="bg_action"></div>
+								<div class="text_item flexbox fjc fac">
+									<div class="text_item_center">
+										<pre class="commodity_title">住 火 險</pre>
+										<div class="commodity_link flexbox fjc fac">
+											<a href="#" class="commodity_link_bt flexbox fjc fac">
+												<div class="commodity_link_text">立即投保</div>
+												<img class="default" src="assets/images/index/icon_commodity_d.svg" alt="link">
+												<img class="hover off" src="assets/images/index/icon_commodity_h.svg" alt="link">
+											</a>
+										</div>
+										<pre class="description_text off">青山依舊在，幾度夕陽紅。慣看秋月春風。一壺濁酒喜相逢，浪花淘盡英雄。是非成敗轉頭空，滾滾長江東逝水，白髮漁樵陽紅。</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--內容主要區塊 輪播事件：Swiper 最新活動-->
+		<div class="content_box index_activity_box flexbox fjc fac">
+			<div class="activity_bg flexbox fjc fac">
+				<img src="assets/images/index/activity_bg.jpg" alt="#">
+			</div>
+			<div class="content_rwd">
+				<div class="index_title_box flexbox fjc fac">
+					<span class="icon_title">
+						<img src="assets/images/index/icon_title.svg" alt="#">
+					</span>
+					<span class="index_title">最 新 活 動</span>
+				</div>
+				<a href="#" class="index_icon_more">
+					<img src="assets/images/index/icon_more.svg" alt="#">
+				</a>
+				<div class="swiper_box style_3d_coverflow">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<a href="#" class="swiper-slide" style="background-image:url(assets/images/index/activity_0.jpg)"></a>
+							<a href="#" class="swiper-slide" style="background-image:url(assets/images/index/activity_1.jpg)"></a>
+							<a href="#" class="swiper-slide" style="background-image:url(assets/images/index/activity_2.jpg)"></a>
+						</div>
+						<!-- Add Pagination -->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--內容主要區塊 時事分享-->
+		<div class="content_box index_news_box">
+			<div class="content_rwd">
+				<div class="index_title_box flexbox fjc fac">
+					<span class="icon_title">
+						<img src="assets/images/index/icon_title.svg" alt="#">
+					</span>
+					<span class="index_title">時 事 分 享</span>
+				</div>
+				<a href="#" class="index_icon_more">
+					<img src="assets/images/index/icon_more.svg" alt="#">
+				</a>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col">
+							<div class="item">
+								<div class="commodity_img flexbox fjc fac">
+									<img src="assets/images/index/news_0.jpg" alt="#">
+									<div class="cover_color"></div>
+								</div>
+								<div class="bg_action"></div>
+								<div class="text_item flexbox fjc fac">
+									<div class="text_item_center">
+										<pre class="commodity_title">旅遊若遇航空公司<br>罷工怎麼辦？</pre>
+										<div class="commodity_link flexbox fjc fac">
+											<a href="#" class="commodity_link_bt flexbox fjc fac">
+												<div class="commodity_link_text">more</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="item">
+								<div class="commodity_img flexbox fjc fac">
+									<img src="assets/images/index/news_1.jpg" alt="#">
+									<div class="cover_color"></div>
+								</div>
+								<div class="bg_action"></div>
+								<div class="text_item flexbox fjc fac">
+									<div class="text_item_center">
+										<pre class="commodity_title">旺旺友聯與您一起<br>守護您的家</pre>
+										<div class="commodity_link flexbox fjc fac">
+											<a href="#" class="commodity_link_bt flexbox fjc fac">
+												<div class="commodity_link_text">more</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="item">
+								<div class="commodity_img flexbox fjc fac">
+									<img src="assets/images/index/news_2.jpg" alt="#">
+									<div class="cover_color"></div>
+								</div>
+								<div class="bg_action"></div>
+								<div class="text_item flexbox fjc fac">
+									<div class="text_item_center">
+										<pre class="commodity_title">金融消費<br>最安心<br></pre>
+										<div class="commodity_link flexbox fjc fac">
+											<a href="#" class="commodity_link_bt flexbox fjc fac">
+												<div class="commodity_link_text">more</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="item">
+								<div class="commodity_img flexbox fjc fac">
+									<img src="assets/images/index/news_3.jpg" alt="#">
+									<div class="cover_color"></div>
+								</div>
+								<div class="bg_action"></div>
+								<div class="text_item flexbox fjc fac">
+									<div class="text_item_center">
+										<pre class="commodity_title">風險管理與保險教<br>育推廣入口</pre>
+										<div class="commodity_link flexbox fjc fac">
+											<a href="#" class="commodity_link_bt flexbox fjc fac">
+												<div class="commodity_link_text">more</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="item">
+								<div class="commodity_img flexbox fjc fac">
+									<img src="assets/images/index/news_4.jpg" alt="#">
+									<div class="cover_color"></div>
+								</div>
+								<div class="bg_action"></div>
+								<div class="text_item flexbox fjc fac">
+									<div class="text_item_center">
+										<pre class="commodity_title">微型保險<br>專區</pre>
+										<div class="commodity_link flexbox fjc fac">
+											<a href="#" class="commodity_link_bt flexbox fjc fac">
+												<div class="commodity_link_text">more</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!---------------------------------------------------------------->
+	<!--ajax jquery include html-->
+	<div class="ajax_footer"></div>
+</body>
+
+</html>

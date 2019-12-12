@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" lang="zh-Hant-TW">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/images/general/favicon.ico">
+	<title>html5</title>
+	<!-- jQuery -->
+	<script src="assets/plugin/jquery.min.js"></script>
+
+<style>
+/***************** CSS3 表格 *****************/
+/* Table 轉 CSS3 */
+.css_table table{display:table;min-width:100%;margin:0;padding:0;font:inherit;font-size:100%;vertical-align:baseline;border-spacing:0;border-collapse:collapse;}
+.css_table thead,.css_table tbody{display:table-row-group;}
+.css_table tr{display:table-row;}
+.css_table th,.css_table td{display:table-cell;vertical-align:middle;}
+.css_table thead,.css_table tbody,.css_table tfoot,.css_table tr{padding:0;border:0;}
+
+/* Table 基本樣式調整 */
+.css_table th,.css_table td{padding:9px 10px 6px 10px;border:1px solid #ddd;font-size:16px;line-height:1.5rem;}
+.css_table th{background-color:#06a5a5;color:#fff;}
+.css_table td{background-color:transparent;}
+.css_table tbody tr:nth-child(odd) td{background-color:#fff;}
+.css_table tbody tr:nth-child(even) td{background-color:#fafafa;}
+.css_table th a,.css_table td a{color:#06a5a5;}
+.css_table .td_button{padding:6px 8px;}
+
+/* CSS Table 凍結定位_左邊 */
+.freeze_left{position:relative;top:0;left:0;border:1px solid #ccc;}
+.freeze_left .scroll_table{overflow-x:auto;overflow-y:visible;margin-left:145px;}
+.freeze_left th,
+.freeze_left td{height:24px;white-space:nowrap;}
+.freeze_left .freeze_left_box{height:0;padding:0;border-width:0;}
+.freeze_left .freeze_left_box .position{position:absolute;left:0;top:0;width:145px;}
+.freeze_left .freeze_left_box th{border-bottom:2px solid #ddd;}
+.freeze_left th:nth-child(1),
+.freeze_left td:nth-child(1){position:absolute;left:0;width:125px;}
+</style>
+
+<script>
+	$(document).ready(function() {
+		/*表格收合*/
+		/*第一類別*/
+		$(".list_bt .list_1 td:nth-child(1)").click(function(){
+			$(".list_bt .list_1_1").toggle();
+			$(".list_bt .list_1_1_1").hide();
+			$(".list_bt .list_1_2").toggle();
+			$(".list_bt .list_1_2_1").hide();
+			$(".list_bt .list_1_3").toggle();
+			$(".list_bt .list_1_3_1").hide();
+			$(".list_bt .list_1_4").toggle();
+			$(".list_bt .list_1_4_1").hide();
+			$(".list_bt .list_1_5").toggle();
+			$(".list_bt .list_1_5_1").hide();
+			$(".list_bt .list_1_6").toggle();
+			$(".list_bt .list_1_6_1").hide();
+			$(".list_bt .list_1_7").toggle();
+			$(".list_bt .list_1_7_1").hide();
+			$(".list_bt .list_1_8").toggle();
+			$(".list_bt .list_1_8_1").hide();
+			$(".list_bt .list_1_9").toggle();
+			$(".list_bt .list_1_9_1").hide();
+			$(".list_bt .list_1_10").toggle();
+			$(".list_bt .list_1_10_1").hide();
+		});
+		$(".list_bt .list_1_1 td:nth-child(1)").click(function(){
+			$(".list_bt .list_1_1_1").toggle();
+		});
+		$(".list_bt .list_1_2 td:nth-child(1)").click(function(){
+			$(".list_bt .list_1_2_1").toggle();
+		});
+		$(".list_bt .list_1_3 td:nth-child(1)").click(function(){
+			$(".list_bt .list_1_3_1").toggle();
+		});
+		$(".list_bt .list_1_4 td:nth-child(1)").click(function(){
+			$(".list_bt .list_1_4_1").toggle();
+		});
+		$(".list_bt .list_1_5 td:nth-child(1)").click(function(){
+			$(".list_bt .list_1_5_1").toggle();
+		});
+		$(".list_bt .list_1_6 td:nth-child(1)").click(function(){
+			$(".list_bt .list_1_6_1").toggle();
+		});
+		$(".list_bt .list_1_7 td:nth-child(1)").click(function(){
+			$(".list_bt .list_1_7_1").toggle();
+		});
+		$(".list_bt .list_1_8 td:nth-child(1)").click(function(){
+			$(".list_bt .list_1_8_1").toggle();
+		});
+		$(".list_bt .list_1_9 td:nth-child(1)").click(function(){
+			$(".list_bt .list_1_9_1").toggle();
+		});
+		$(".list_bt .list_1_10 td:nth-child(1)").click(function(){
+			$(".list_bt .list_1_10_1").toggle();
+		});
+
+
+	});
+</script>
+
+</head>
+<body>
+
+<!-- css_table -->
+<div class="freeze_left css_table list_bt">
+	<div class="scroll_table css_table">
+		<table>
+			<thead>
+				<tr>
+					<th>標題固定區塊</th>
+					<th>滾動區塊滾動區塊 3</th>
+					<th>滾動區塊滾動區塊 4</th>
+					<th>滾動區塊滾動區塊 5</th>
+					<th>滾動區塊 6</th>
+					<th>滾動區塊 7</th>
+					<th>滾動區塊 8</th>
+					<th>滾動區塊 9</th>
+					<th>滾動區塊 10</th>
+					<th>滾動區塊 11</th>
+					<th>滾動區塊 12</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="list_1">
+					<td>階層1</td>
+					<td>滾動內容 3</td>
+					<td>滾動內容 4</td>
+					<td>滾動內容 5</td>
+					<td>滾動內容 6</td>
+					<td>滾動內容 7</td>
+					<td>滾動內容 8</td>
+					<td>滾動內容 9</td>
+					<td>滾動內容 10</td>
+					<td>滾動內容 11</td>
+					<td>滾動內容 12</td>
+				</tr>
+				<tr class="list_1_1">
+					<td>階層1-2</td>
+					<td>滾動內容 3</td>
+					<td>滾動內容 4</td>
+					<td>滾動內容 5</td>
+					<td>滾動內容 6</td>
+					<td>滾動內容 7</td>
+					<td>滾動內容 8</td>
+					<td>滾動內容 9</td>
+					<td>滾動內容 10</td>
+					<td>滾動內容 11</td>
+					<td>滾動內容 12</td>
+				</tr>
+				<tr class="list_1_1_1">
+					<td>階層1-2-3</td>
+					<td>滾動內容 3</td>
+					<td>滾動內容 4</td>
+					<td>滾動內容 5</td>
+					<td>滾動內容 6</td>
+					<td>滾動內容 7</td>
+					<td>滾動內容 8</td>
+					<td>滾動內容 9</td>
+					<td>滾動內容 10</td>
+					<td>滾動內容 11</td>
+					<td>滾動內容 12</td>
+				</tr>
+				<tr class="list_1_1_1">
+					<td>階層1-2-3</td>
+					<td>滾動內容 3</td>
+					<td>滾動內容 4</td>
+					<td>滾動內容 5</td>
+					<td>滾動內容 6</td>
+					<td>滾動內容 7</td>
+					<td>滾動內容 8</td>
+					<td>滾動內容 9</td>
+					<td>滾動內容 10</td>
+					<td>滾動內容 11</td>
+					<td>滾動內容 12</td>
+				</tr>
+				<tr class="list_1_2">
+					<td>階層1-2</td>
+					<td>滾動內容 3</td>
+					<td>滾動內容 4</td>
+					<td>滾動內容 5</td>
+					<td>滾動內容 6</td>
+					<td>滾動內容 7</td>
+					<td>滾動內容 8</td>
+					<td>滾動內容 9</td>
+					<td>滾動內容 10</td>
+					<td>滾動內容 11</td>
+					<td>滾動內容 12</td>
+				</tr>
+				<tr class="list_1_2_1">
+					<td>階層1-2-3</td>
+					<td>滾動內容 3</td>
+					<td>滾動內容 4</td>
+					<td>滾動內容 5</td>
+					<td>滾動內容 6</td>
+					<td>滾動內容 7</td>
+					<td>滾動內容 8</td>
+					<td>滾動內容 9</td>
+					<td>滾動內容 10</td>
+					<td>滾動內容 11</td>
+					<td>滾動內容 12</td>
+				</tr>
+				<tr class="list_1_2_1">
+					<td>階層1-2-3</td>
+					<td>滾動內容 3</td>
+					<td>滾動內容 4</td>
+					<td>滾動內容 5</td>
+					<td>滾動內容 6</td>
+					<td>滾動內容 7</td>
+					<td>滾動內容 8</td>
+					<td>滾動內容 9</td>
+					<td>滾動內容 10</td>
+					<td>滾動內容 11</td>
+					<td>滾動內容 12</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div><!-- /css_table -->
+
+
+
+
+</body>
+</html>

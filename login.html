@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" lang="zh-Hant-TW">
+	<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/images/general/favicon.ico">
+	<title>旺旺友聯網投 2.0</title>
+	<!-- jQuery -->
+	<script src="assets/plugin/jquery.min.js"></script>
+	<!-- ajax jquery include html -->
+	<script>
+	$(document).ready(function() {
+		/* ajax jquery include html */
+		$(".ajax_header").load("ajax_header.html");
+		$(".ajax_footer").load("ajax_footer.html");
+	});
+	</script>
+	<!-- Bootstrap v4.3 -->
+	<script src="assets/plugin/bootstrap/bootstrap.min.js"></script>
+	<link href="assets/plugin/bootstrap/bootstrap.css" rel="stylesheet">
+	<!-- Bootstrap 自定義 -->
+	<link href="assets/plugin/bootstrap/bootstrap-grid-customizing.css" rel="stylesheet">
+	<!-- jQuery UI -->
+	<link href="assets/plugin/jquery_ui/jquery-ui.min.css" rel="stylesheet">
+	<script src="assets/plugin/jquery_ui/jquery-ui.min.js"></script>
+	<!-- 日期選擇器_世界年與民國年：支援 jQuery UI -->
+	<script src="assets/plugin/datepicker_globe_tw.js"></script>
+	<!-- 搜全局輸入框：搜尋自動完成 -->
+	<script src="assets/plugin/plumen.js"></script>
+	<!-- 輪播：Swiper 支援IE10+ -->
+	<link href="assets/plugin/swiper.min.css" rel="stylesheet">
+	<script src="assets/plugin/swiper.min.js"></script>
+	<!-- 延遲加載圖像：Lazy Load 2 -->
+	<script src="assets/plugin/lazyload2.min.js"></script>
+	<!-- 自訂CSS樣式 -->
+	<link href="assets/css/type.css" rel="stylesheet">
+	<!-- 自訂JS樣式 -->
+	<script src="assets/js/type.js"></script>
+	<!-- Plug CSS樣式 -->
+	<link href="assets/css/type_plug.css" rel="stylesheet">
+</head>
+
+<body>
+	<!--ajax jquery include html-->
+	<div class="ajax_header"></div>
+	<!--內容主要區塊 上方空間-->
+	<div class="space_top_box"></div>
+	<!---------------------------------------------------------------->
+	<!--內容主要區塊-->
+	<div class="content_box">
+		<div class="content_rwd">
+			<form action="#" method="get">
+				<div class="container-fluid">
+					<div class="login_box row justify-content-center">
+						<div class="col-xxl-8 col-xl-10 col-lg-12 col-sm-12 col-12">
+							<div class="logo flexbox fjc fac">
+								<img src="assets/images/general/logo_only.svg" alt="#">
+							</div>
+							<div class="title_box flexbox fjc fac">
+								<div class="line"></div>
+								<div class="title">使用旺旺友聯帳號登入</div>
+							</div>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col_input col-xxl-5 col-xl-6 col-lg-8 col-sm-12 col-12">
+							<div class="input_border style_2 pie">
+								<div class="input_padding">
+									<input type="text" placeholder="請輸入身分證字號" class="placeholder" required="" oninvalid="setCustomValidity('必填')" oninput="setCustomValidity('')">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="input_code_box row justify-content-center">
+						<div class="col_input col-xxl-5 col-xl-6 col-lg-8 col-sm-12 col-12">
+							<div class="input_border style_2 pie">
+								<div class="input_padding">
+									<input type="text" placeholder="圖形驗證碼" class="placeholder" required="" oninvalid="setCustomValidity('必填')" oninput="setCustomValidity('')">
+								</div>
+							</div>
+							<div class="code_box input_border style_2 pie">
+								<div class="code_img flexbox fjc fac">
+									<img src="assets/images/general/code.png" alt="#">
+								</div>
+							</div>
+							<div class="reorganize_code flexbox fjc fac">
+								<img src="assets/images/general/icon_reload_code.svg" alt="Reload">
+							</div>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col_input col-xxl-5 col-xl-6 col-lg-8 col-sm-12 col-12">
+							<button type="submit" class="button style_2 bt_color_1 pie" data-toggle="modal" data-target="#send_login">登入</button>
+						</div>
+					</div>
+				</div>
+			</form>
+			<div class="container-fluid">
+				<div class="row justify-content-center">
+					<div class="col_input col-xxl-5 col-xl-6 col-lg-8 col-sm-12 col-12">
+						<button type="submit" class="button style_2 bt_color_2 pie" onclick="javascript:location.href='member_general_registered.html'">加入會員</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- modal 登入-->
+	<div class="modal fade popup_type" id="send_login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">
+						<img src="assets/images/general/icon_close.svg" alt="close">
+					</span>
+				</button>
+				<div class="modal-body">
+					<div class="title_type no1">
+						<div class="line_box">
+							<div>
+								<div class="title">選擇發送驗證碼</div>
+								<div class="text">
+									<span>
+										<img class="icon" src="assets/images/general/icon_send_code_p.svg" alt="#">
+									</span>
+									<span class="user_date flexbox fjc fac">
+										<pre>0983***071</pre>
+									</span>
+									<span>
+										<button type="button" class="button style_2 bt_color_1 pie" data-toggle="modal" data-target="#send_code_success">發送</button>
+									</span>
+								</div>
+								<div class="text">
+									<span>
+										<img class="icon" src="assets/images/general/icon_send_code_m.svg" alt="#">
+									</span>
+									<span class="user_date flexbox fjc fac">
+										<pre>49***@mailCompany.com.tw</pre>
+									</span>
+									<span>
+										<button type="button" class="button style_2 bt_color_1 pie" data-toggle="modal" data-target="#send_code_error">發送</button>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<form action="#" method="get">
+						<div class="container-fluid">
+							<div class="login_box row justify-content-center">
+								<div class="col-xxl-12 col-xl-12 col-lg-12 col-sm-12 col-12">
+									<div class="logo flexbox fjc fac">
+										<img src="assets/images/general/logo_only.svg" alt="#">
+									</div>
+									<div class="title_box flexbox fjc fac">
+										<div class="line"></div>
+										<div class="title">使用旺旺友聯帳號登入</div>
+									</div>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col_input col-xxl-8 col-xl-8 col-lg-8 col-sm-12 col-12">
+									<div class="input_border style_2 pie">
+										<div class="input_padding">
+											<input type="text" placeholder="請輸入驗證碼" class="placeholder" required="" oninvalid="setCustomValidity('必填')" oninput="setCustomValidity('')">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row justify-content-center timing_box">
+								<div class="col-xxl-8 col-xl-8 col-lg-8 col-sm-12 col-12">
+									<div class="text flexbox fjc fac">
+										<span>驗證碼將在</span>
+										<span class="timing">4:59</span>
+										<span>失效</span>
+									</div>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col_input col-xxl-8 col-xl-8 col-lg-8 col-sm-12 col-12">
+									<button type="submit" class="button style_2 bt_color_1 pie">確認登入</button>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col_input col-xxl-8 col-xl-8 col-lg-8 col-sm-12 col-12">
+									<button type="button" class="button style_2 bt_color_2 pie" data-toggle="modal" data-target="#resend_code">無法取得驗證碼</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- modal 發送驗證碼 成功-->
+	<div class="modal popup_type to_popup" id="send_code_success" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">
+						<img src="assets/images/general/icon_close.svg" alt="close">
+					</span>
+				</button>
+				<div class="modal-body">
+					<div class="icon_msg flexbox fjc fac">
+						<img src="assets/images/general/send_code_success.svg" alt="驗證碼已發送">
+					</div>
+					<div class="title s3 title_msg">驗證碼已發送</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- modal 發送驗證碼 錯誤-->
+	<div class="modal popup_type to_popup" id="send_code_error" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">
+						<img src="assets/images/general/icon_close.svg" alt="close">
+					</span>
+				</button>
+				<div class="modal-body">
+					<div class="icon_msg flexbox fjc fac">
+						<img src="assets/images/general/send_code_error.svg" alt="錯誤">
+					</div>
+					<div class="title s3 title_msg">請確認手機及email是否正確</div>
+					<div class="text s4 text_msg">如仍無法收到認證碼，<br>請於週一至週五上班時間08:30~17:30，<br>來電0800-024-024客服人員進行修改</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- modal 無法取得驗證碼-->
+	<div class="modal fade popup_type" id="resend_code" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">
+						<img src="assets/images/general/icon_close.svg" alt="close">
+					</span>
+				</button>
+				<div class="modal-body">
+					<form action="#" method="get">
+						<div class="title_type no1">
+							<div class="line_box">
+								<div>
+									<div class="title">請輸入註冊提供的手機及mail資訊</div>
+									<div class="text">
+										<span>
+											<img class="icon" src="assets/images/general/icon_send_code_p.svg" alt="#">
+										</span>
+										<span class="user_date flexbox fjc fac">
+											<pre class="flexbox fjc fac">
+												<span>0983</span>
+												<span class="input_border style_2 pie">
+													<div class="input_padding">
+														<input type="tel" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('必填')" oninput="setCustomValidity('')">
+													</div>
+												</span>
+												<span>071</span>
+											</pre>
+										</span>
+									</div>
+									<div class="text">
+										<span>
+											<img class="icon" src="assets/images/general/icon_send_code_m.svg" alt="#">
+										</span>
+										<span class="user_date flexbox fjc fac mail">
+											<pre class="flexbox fjc fac">
+												<span class="input_border style_2 pie">
+													<div class="input_padding">
+														<input type="text" placeholder="" class="placeholder" required="" oninvalid="setCustomValidity('必填')" oninput="setCustomValidity('')">
+													</div>
+												</span>
+												<span class="mail_company">@mailCompany.com.tw</span>
+											</pre>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="text s4 text_msg">如已忘記，請於週一至週五上班時間08:30~17:30，<br>來電0800-024-024客服人員進行修改</div>
+						<div class="container-fluid">
+							<div class="row justify-content-center">
+								<div class="col_input col-xxl-8 col-xl-8 col-lg-8 col-sm-12 col-12">
+									<button type="submit" class="button style_2 bt_color_1 pie" onclick="javascript:location.href='member_otp_maintenance.html'">確認</button>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="col_input col-xxl-8 col-xl-8 col-lg-8 col-sm-12 col-12">
+									<button type="button" class="button style_2 bt_color_2 pie" data-toggle="modal" data-target="#resend_code">取消</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!---------------------------------------------------------------->
+	<!--內容主要區塊 下方空間-->
+	<div class="space_bottom_box"></div>
+	<!--ajax jquery include html-->
+	<div class="ajax_footer"></div>
+</body>
+
+</html>

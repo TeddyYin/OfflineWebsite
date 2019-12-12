@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" lang="zh-Hant-TW">
+	<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="icon" type="image/png" href="assets/images/general/favicon.ico">
+	<title>旺旺友聯網投 2.0</title>
+	<!-- jQuery -->
+	<script src="assets/plugin/jquery.min.js"></script>
+	<!-- ajax jquery include html -->
+	<script>
+	$(document).ready(function() {
+		/* ajax jquery include html */
+		$(".ajax_header").load("ajax_header.html");
+		$(".ajax_footer").load("ajax_footer.html");
+	});
+	</script>
+	<!-- Bootstrap v4.3 -->
+	<script src="assets/plugin/bootstrap/bootstrap.min.js"></script>
+	<link href="assets/plugin/bootstrap/bootstrap.css" rel="stylesheet">
+	<!-- Bootstrap 自定義 -->
+	<link href="assets/plugin/bootstrap/bootstrap-grid-customizing.css" rel="stylesheet">
+	<!-- jQuery UI -->
+	<link href="assets/plugin/jquery_ui/jquery-ui.min.css" rel="stylesheet">
+	<script src="assets/plugin/jquery_ui/jquery-ui.min.js"></script>
+	<!-- 日期選擇器_世界年與民國年：支援 jQuery UI -->
+	<script src="assets/plugin/datepicker_globe_tw.js"></script>
+	<!-- 搜全局輸入框：搜尋自動完成 -->
+	<script src="assets/plugin/plumen.js"></script>
+	<!-- 輪播：Swiper 支援IE10+ -->
+	<link href="assets/plugin/swiper.min.css" rel="stylesheet">
+	<script src="assets/plugin/swiper.min.js"></script>
+	<!-- 延遲加載圖像：Lazy Load 2 -->
+	<script src="assets/plugin/lazyload2.min.js"></script>
+	<!-- 自訂CSS樣式 -->
+	<link href="assets/css/type.css" rel="stylesheet">
+	<!-- 自訂JS樣式 -->
+	<script src="assets/js/type.js"></script>
+	<!-- Plug CSS樣式 -->
+	<link href="assets/css/type_plug.css" rel="stylesheet">
+</head>
+
+<body>
+	<!--ajax jquery include html-->
+	<div class="ajax_header"></div>
+	<!--內容主要區塊 上方空間-->
+	<div class="space_top_box"></div>
+	<!---------------------------------------------------------------->
+	<!--內容主要區塊 步驟流程-->
+	<div class="content_box">
+		<div class="content_rwd">
+			<div class="step_box">
+				<div class="car_box in6">
+					<div class="line"></div>
+					<img class="car" src="assets/images/car/icon_step_car.svg" alt="car">
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">車主概要</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">車籍資料</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">選擇方案</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">投保內容</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">要保資訊</div>
+				</div>
+				<div class="step_item">
+					<div class="step_mag text s2">付款投保</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<form action="#" method="get">
+		<!--內容主要區塊-->
+		<div class="content_box relative have_bg">
+			<div class="bg_car left">
+				<img src="assets/images/car/bg_car.svg" alt="#">
+			</div>
+			<div class="content_rwd">
+				<div class="container-fluid">
+					<div class="row justify-content-end">
+						<div class="col_input col-xxl-8 col-xl-8 col-lg-10 col-sm-12 col-12">
+							<div class="car_input_box">
+								<div class="col_title_box flexbox fac">
+									<div class="icon">
+										<img src="assets/images/car/icon_input_car.svg" alt="icon">
+									</div>
+									<div class="title_box">選擇繳款方式</div>
+								</div>
+								<div class="payment_box">
+									<div class="row">
+										<div class="col-3 flexbox fjc fac">
+											<a href="">
+												<img src="assets/images/car/icon_payment_1.svg" alt="#">
+											</a>
+										</div>
+										<div class="col-3 flexbox fjc fac">
+											<a href="">
+												<img src="assets/images/car/icon_payment_2.svg" alt="#">
+											</a>
+										</div>
+										<div class="col-3 flexbox fjc fac">
+											<a href="">
+												<img src="assets/images/car/icon_payment_3.svg" alt="#">
+											</a>
+										</div>
+										<div class="col-3 flexbox fjc fac">
+											<a href="">
+												<img src="assets/images/car/icon_payment_4.svg" alt="#">
+											</a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-12">
+											<span class="checkbox_box">
+												<input id="radio08_1" type="radio" name="radio08" value="1">
+												<label for="radio08_1">我是很長的公司名字</label>
+											</span>
+										</div>
+										<div class="col-12">
+											<span class="checkbox_box">
+												<input id="radio08_2" type="radio" name="radio08" value="1">
+												<label for="radio08_2">王寶寶</label>
+											</span>
+										</div>
+										<div class="col-12">
+											<div class="money">繳款金額<span class="c_red">NT$4,349</span></div>
+										</div>
+									</div>
+								</div>
+								<div class="payment_input_box">
+									<div class="payment_input row">
+										<div class="col_input col-12">
+											<div class="input_border style_2 pie">
+												<div class="input_padding">
+													<input type="text" placeholder="請輸入身分證字號" class="placeholder" required="">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="payment_input row">
+										<div class="col_input col-12">
+											<div class="input_border style_2 pie">
+												<div class="input_padding">
+													<input type="text" placeholder="請輸入姓名" class="placeholder" required="">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col_input col-xxl-3 col-xl-3 col-lg-3 col-sm-6 col-6">
+											<div class="input_border style_2 pie">
+												<div class="input_padding">
+													<input id="continuous_input_01_1" type="tel" placeholder="卡號" class="placeholder" value="" maxlength="4" required="">
+												</div>
+											</div>
+										</div>
+										<div class="col_input col-xxl-3 col-xl-3 col-lg-3 col-sm-6 col-6">
+											<div class="input_border style_2 pie">
+												<div class="input_padding">
+													<input id="continuous_input_01_2" type="tel" placeholder="卡號" class="placeholder" value="" maxlength="4" required="">
+												</div>
+											</div>
+										</div>
+										<div class="col_input col-xxl-3 col-xl-3 col-lg-3 col-sm-6 col-6">
+											<div class="input_border style_2 pie">
+												<div class="input_padding">
+													<input id="continuous_input_01_3" type="tel" placeholder="卡號" class="placeholder" value="" maxlength="4" required="">
+												</div>
+											</div>
+										</div>
+										<div class="col_input col-xxl-3 col-xl-3 col-lg-3 col-sm-6 col-6">
+											<div class="input_border style_2 pie">
+												<div class="input_padding">
+													<input id="continuous_input_01_4" type="tel" placeholder="卡號" class="placeholder" value="" maxlength="4" required="">
+												</div>
+											</div>
+										</div>
+										<div class="col_input col-xxl-3 col-xl-6 col-lg-6 col-sm-6 col-6">
+											<div class="input_border style_2 pie">
+												<div class="input_padding">
+													<div class="select_box">
+														<select name="#">
+															<option value="0">有效月</option>
+															<option value="01">01</option>
+															<option value="02">02</option>
+															<option value="03">03</option>
+															<option value="04">04</option>
+															<option value="05">05</option>
+															<option value="06">06</option>
+															<option value="07">07</option>
+															<option value="08">08</option>
+															<option value="09">09</option>
+															<option value="10">10</option>
+															<option value="11">11</option>
+															<option value="12">12</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col_input col-xxl-3 col-xl-6 col-lg-6 col-sm-6 col-6">
+											<div class="input_border style_2 pie">
+												<div class="input_padding">
+													<div class="select_box">
+														<select name="#">
+															<option value="0">有效年</option>
+															<option value="2019">2019</option>
+															<option value="2020">2020</option>
+															<option value="2021">2021</option>
+															<option value="2022">2022</option>
+															<option value="2023">2023</option>
+															<option value="2024">2024</option>
+															<option value="2025">2025</option>
+															<option value="2026">2026</option>
+															<option value="2027">2027</option>
+															<option value="2028">2028</option>
+															<option value="2029">2029</option>
+															<option value="2030">2030</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col_input col-xxl-3 col-xl-6 col-lg-6 col-sm-6 col-6">
+											<div class="input_border style_2 pie">
+												<div class="input_padding">
+													<input type="tel" placeholder="檢核碼" class="placeholder" value="" maxlength="3" required="">
+												</div>
+											</div>
+										</div>
+										<div class="col_input col-xxl-3 col-xl-6 col-lg-6 col-sm-6 col-6">
+											<div class="icon_payment_ww flexbox fjc fac">
+												<img src="assets/images/general/icon_payment_ww.svg" alt="#">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--內容主要區塊-->
+		<div class="content_box">
+			<div class="content_rwd">
+				<div class="container-fluid">
+					<div class="row justify-content-end">
+						<div class="col-12">
+							<div class="label_box">
+								<div class="title_box">網路投保目前不接受下列發卡機構之信用卡</div>
+								<div class="label_content_box">
+									<h4>中華郵政公司 王道商業銀行 渣打銀行 樂天信用卡 匯豐(台灣) 台中銀行 台灣銀行 台灣土地銀行 合作金庫 彰化銀行 高雄銀行 台灣企銀 中國信託 兆豐銀行 聯邦銀行 遠東銀行 日盛銀行 台新銀行 安泰銀行 新光銀行 元大銀行 陽信銀行 三信銀行 第一銀行 華南銀行 華泰銀行 星展(台灣) 台北富邦 凱基銀行 永豐銀行 上海銀行 玉山銀行 國泰世華</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--內容主要區塊-->
+		<div class="content_box">
+			<div class="content_rwd">
+				<div class="container-fluid">
+					<div class="row justify-content-center">
+						<div class="col_input col-xxl-5 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<button type="button" class="button style_2 bt_color_2 pie" onclick="javascript:location.href='car_step_5.html'">上一步-要保資訊</button>
+						</div>
+						<div class="col_input col-xxl-5 col-xl-6 col-lg-6 col-sm-12 col-12">
+							<button type="submit" class="button style_2 bt_color_1 pie" onclick="javascript:location.href='#'">下一步-進行投保</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	<!---------------------------------------------------------------->
+	<!--內容主要區塊 下方空間-->
+	<div class="space_bottom_box"></div>
+	<!--ajax jquery include html-->
+	<div class="ajax_footer"></div>
+</body>
+
+</html>

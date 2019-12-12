@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<div class="hor_level_menu on page_menu">
+		<div class="left_box flexbox fjc fac">
+			<div class="logo_box">
+				<a class="logo" href="index.html">
+					<img src="assets/images/general/logo_p.svg" alt="首頁">
+				</a>
+				<a class="logo_sub" href="#">
+					<img src="assets/images/general/logo_sub_p.svg" alt="e指保">
+				</a>
+			</div>
+			<div class="menu_button_show">
+				<img src="assets/images/general/menu_button_show_p.svg" alt="選單按鈕">
+			</div>
+		</div>
+		<div class="menu_layer">
+			<ul>
+				<li class="member_name">
+					<pre>Queena Chin 您好</pre>
+				</li>
+				<li>
+					<div class="item_title">
+						<a href="index.html">
+							<img class="icon_menu" src="assets/images/general/icon_menu_0_p.svg" alt="#">
+							<img class="icon_menu off" src="assets/images/general/icon_menu_0_h.svg" alt="#">
+							<span>首頁</span>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="item_title">
+						<a href="#">
+							<img class="icon_menu" src="assets/images/general/icon_menu_1_p.svg" alt="#">
+							<img class="icon_menu off" src="assets/images/general/icon_menu_1_h.svg" alt="#">
+							<span>最新活動</span>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="item_title">
+						<a href="#">
+							<img class="icon_menu" src="assets/images/general/icon_menu_2_p.svg" alt="#">
+							<img class="icon_menu off" src="assets/images/general/icon_menu_2_h.svg" alt="#">
+							<span>汽車險</span>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="item_title">
+						<a href="#">
+							<img class="icon_menu" src="assets/images/general/icon_menu_3_p.svg" alt="#">
+							<img class="icon_menu off" src="assets/images/general/icon_menu_3_h.svg" alt="#">
+							<span>機車險</span>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="item_title">
+						<a href="#">
+							<img class="icon_menu" src="assets/images/general/icon_menu_4_p.svg" alt="#">
+							<img class="icon_menu off" src="assets/images/general/icon_menu_4_h.svg" alt="#">
+							<span>旅平險</span>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="item_title">
+						<a href="#">
+							<img class="icon_menu" src="assets/images/general/icon_menu_5_p.svg" alt="#">
+							<img class="icon_menu off" src="assets/images/general/icon_menu_5_h.svg" alt="#">
+							<span>住宅火險</span>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="item_title">
+						<a href="login.html">
+							<img class="icon_menu" src="assets/images/general/icon_menu_6_p.svg" alt="#">
+							<img class="icon_menu off" src="assets/images/general/icon_menu_6_h.svg" alt="#">
+							<span>會員中心</span>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+<script>
+/* 寬度判斷事件 選單 行動版*/
+$(document).ready(str_menu);
+$(window).on("resize", str_menu);
+
+function str_menu() {
+
+	/* 大裝置 */
+	if ($(window).width() > 1000) {
+
+		/* 還原預設值 */
+		$(".menu_layer").show();
+		$(".menu_layer ul").css({ left: "0%" });
+
+		/* 事件 */
+		return false;
+
+	}
+
+	/* 小裝置 */
+	if ($(window).width() <= 1000) {
+
+		/* 還原預設值 */
+		$(".menu_layer").hide();
+		$(".menu_layer ul").css({ left: "-260px" });
+
+		/* 事件 */
+		$(".menu_button_show").click(function() {
+			$(".menu_layer").stop(true, false);
+			$(".menu_layer").show();
+			$(".menu_layer ul").stop(true, false);
+			$(".menu_layer ul").animate({ left: "0%" }, 500);
+		});
+		$(".menu_layer").click(function() {
+			$(".menu_layer").stop(true, false);
+			$(".menu_layer").hide();
+			$(".menu_layer ul").stop(true, false);
+			$(".menu_layer ul").animate({ left: "-260px" }, 500);
+		});
+
+		return false;
+
+	}
+
+}
+
+
+/******************************************************************/
+
+$(document).ready(function() {
+
+
+	/* 選單 hover */
+	$(".menu_layer .item_title").hover(
+		function() {
+			$(this).children().children(".icon_menu").hide();
+			$(this).children().children(".icon_menu.off").show();
+			$(this).children().children("span").addClass("action");
+		},
+		function() {
+			$(this).children().children(".icon_menu").show();
+			$(this).children().children(".icon_menu.off").hide();
+			$(this).children().children("span").removeClass("action");
+		}
+	);
+
+
+	/* 停用行動版放大功能 */
+	window.onload = function() {
+		document.addEventListener('touchstart', function(event) {
+			if (event.touches.length > 1) {
+				event.preventDefault();
+			}
+		});
+		var lastTouchEnd = 0;
+		document.addEventListener('touchend', function(event) {
+			var now = (new Date()).getTime();
+			if (now - lastTouchEnd <= 300) {
+				event.preventDefault();
+			}
+			lastTouchEnd = now;
+		}, false);
+		document.addEventListener('gesturestart', function(event) {
+			event.preventDefault();
+		});
+	}
+
+
+});
+</script>
+
+</html>
