@@ -1,19 +1,14 @@
 {
   "name": "旺旺友聯網投 2.0",
-  "short_name": "旺旺友聯網投 2.X",
-  "start_url": "login.html",
-  "background_color": "currentColor",
+  "short_name": "旺旺友聯網投 1213 1903",
+  "start_url": "/index.html",
+  "background_color": "#dc3545",
   "display": "standalone",
   "icons": [
     {
       "src": "assets/images/general/favicon.ico",
       "type": "image/png",
-      "sizes": "512x512"
-    },
-    {
-      "src": "/images/icons-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "128x128"
     }
   ],
   "scope": "/",
