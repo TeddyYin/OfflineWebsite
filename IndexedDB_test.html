@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- jQuery -->
+	<script src="assets/plugin/jquery.min.js"></script>
+	<!-- Bootstrap v4.3 -->
+	<script src="assets/plugin/bootstrap/bootstrap.min.js"></script>
+	<link href="assets/plugin/bootstrap/bootstrap.css" rel="stylesheet">
+	<!-- Bootstrap 自定義 -->
+	<link href="assets/plugin/bootstrap/bootstrap-grid-customizing.css" rel="stylesheet">
+</head>
+
+    <h1>IndexedDB Demo: Neo Yin</h1>
+    <div class="note">
+      <p>
+        Works and tested with:
+      </p>
+      <div id="compat">
+      </div>
+    </div>
+
+    <div id="msg">
+    </div>
+
+    <form id="register-form">
+      <table>
+        <tbody>
+		  <tr>
+            <td>
+              <label for="pub-id" class="required">
+                ID:<br/>
+                <span class="note">(ISBN, ISSN, etc.)</span>
+              </label>
+            </td>
+            <td>
+              <input type="text" id="pub-id" name="pub-id"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="pub-user" class="required">
+                User Name:
+              </label>
+            </td>
+            <td>
+              <input type="text" id="pub-user" name="pub-user" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="pub-car-number">
+                Car number:
+              </label>
+            </td>
+            <td>
+              <input type="text" id="pub-car-number" name="pub-car-number" />
+            </td>
+          </tr>
+		  <tr>
+            <td>
+              <label for="pub-container">
+                Container:
+              </label>
+            </td>
+            <td>
+              <input type="text" id="pub-container" name="pub-container" />
+            </td>
+          </tr>
+		  <tr>
+            <td>
+              <label for="pub-location-start">
+                Location Start:
+              </label>
+            </td>
+            <td>
+              <input type="text" id="pub-location-start" name="pub-location-start" />
+            </td>
+          </tr>
+		  <tr>
+            <td>
+              <label for="pub-location-end">
+                Location End:
+              </label>
+            </td>
+            <td>
+              <input type="text" id="pub-location-end" name="pub-location-end" />
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td>
+              <label for="pub-file">
+                File image:
+              </label>
+            </td>
+            <td>
+              <input type="file" id="pub-file"/>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="pub-file-url">
+                Online-file image URL:<br/>
+                <span class="note">(same origin URL)</span>
+              </label>
+            </td>
+            <td>
+              <input type="text" id="pub-file-url" name="pub-file-url"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="button-pane">
+        <input type="button" id="add-button" value="Add Publication" />
+        <input type="reset" id="register-form-reset"/>
+      </div>
+    </form>
+
+    <form id="delete-form">
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <label for="pub-id-to-delete">
+                ID:<br/>
+                <span class="note">(ISBN, ISSN, etc.)</span>
+              </label>
+            </td>
+            <td>
+              <input type="text" id="pub-id-to-delete" name="pub-id-to-delete" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="key-to-delete">
+                Key:<br/>
+                <span class="note">(for example 1, 2, 3, etc.)</span>
+              </label>
+            </td>
+            <td>
+              <input type="text" id="key-to-delete"
+                     name="key-to-delete" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button-pane">
+        <input type="button" id="delete-button" value="Delete Publication" />
+        <input type="button" id="clear-store-button"
+               value="Clear the whole store" class="destructive" />
+      </div>
+    </form>
+
+    <form id="search-form">
+      <div class="button-pane">
+        <input type="button" id="search-list-button"
+               value="List database content" />
+      </div>
+    </form>
+
+    <div>
+      <div id="pub-msg">
+      </div>
+      <div id="pub-viewer">
+      </div>
+      <ul id="pub-list">
+      </ul>
+    </div>
+	
+	<script src="assets/js/IndexedDB_test.js"></script>
+	<link href="assets/css/IndexedDB.css" rel="stylesheet">
+	
+</html>
