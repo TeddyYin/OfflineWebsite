@@ -34,6 +34,10 @@ self.__precacheManifest = [
     "revision": "3dc859e4188f2db9cefd5584e2e25c21"
   },
   {
+    "url": "assets/css/IndexedDB.css",
+    "revision": "221eb9b8acd53e2cf99601dcdc27f968"
+  },
+  {
     "url": "assets/css/type_plug.css",
     "revision": "ec44f0097f1f2b5549f5da0419a9a07d"
   },
@@ -522,6 +526,22 @@ self.__precacheManifest = [
     "revision": "d08adc2bc68f8644cab3be0dd43eaf02"
   },
   {
+    "url": "assets/js/IndexedDB_fail.js",
+    "revision": "1ad356a3de29009db99caffbf99e8828"
+  },
+  {
+    "url": "assets/js/IndexedDB_origin.js",
+    "revision": "a4eab2f988d3e6f05fb2cdc8596e76bb"
+  },
+  {
+    "url": "assets/js/IndexedDB_test.js",
+    "revision": "9e06e1907881ece7252d3a0de9161337"
+  },
+  {
+    "url": "assets/js/IndexedDB.js",
+    "revision": "3eab4f3d72e2cdf4f4ab9e91c54dda48"
+  },
+  {
     "url": "assets/js/type.js",
     "revision": "56aa55f14a8577d225240f7589039b8b"
   },
@@ -619,11 +639,19 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "9529f0eafe9b12dc3988588629267908"
+    "revision": "b5f4bf7e3f6008f39de0980ba790fde0"
   },
   {
     "url": "index.php",
     "revision": "d95cd2b3fde5d219cced7631cb533534"
+  },
+  {
+    "url": "IndexedDB_origin.html",
+    "revision": "e418e81ef973d0a0712734b085602ef6"
+  },
+  {
+    "url": "IndexedDB_test.html",
+    "revision": "87696616afaf8f1910bca646f88e6c89"
   },
   {
     "url": "login.html",
@@ -631,7 +659,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.json",
-    "revision": "2126b8588fb3c20fe9d792f5f1f79dff"
+    "revision": "e6a2075a965d5a0c2469b629befccf53"
   },
   {
     "url": "member_general_registered.html",
@@ -643,11 +671,15 @@ self.__precacheManifest = [
   },
   {
     "url": "package-lock.json",
-    "revision": "78ca3a99cd330c3ae89670c1f451b3e9"
+    "revision": "84aa831e2bc5d6dfd621f74a72cb1dcf"
   },
   {
     "url": "page_activity_1.html",
     "revision": "5a6038a9c7d27c687bf09b62564b3ced"
+  },
+  {
+    "url": "test.pdf",
+    "revision": "846d3805522e0391a4aadd40b4ae5f77"
   },
   {
     "url": "type_car.html",
